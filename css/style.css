@@ -1,0 +1,50 @@
+:root {
+  --primary-color: #fff;
+  --seecondary-color: #323232;
+  --page-background-green: #849d8f;
+  --page-background-blue: #8996a6;
+  --page-background-beige: #9d8b84;
+  --small-element-background: #231f20;
+  --cart-stroke: #343434;
+  --active-link-contrast: #e84d37;
+  --active-link-pale: #ffbc9e;
+  --goodsremoving-cross-color: #2c2829;
+  --hover-menu-item-background: #fbded7;
+  --active-menu-item-background: #f6b5a5;
+  --currentpage-menu-item-background: #d07058;
+  --placeholder-color: #999;
+}
+
+/* /////////////////////////////// */
+
+/* ШРИФТЫ */
+
+@font-face {
+  font-family: "robotoregular";
+  src:
+    url("../fonts/roboto.woff2") format("woff2"),
+    url("../fonts/roboto.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "robotomedium";
+  src:
+    url("../fonts/robotomedium.woff2") format("woff2"),
+    url("../fonts/robotomedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "robotobold";
+  src:
+    url("../fonts/robotobold.woff2") format("woff2"),
+    url("../fonts/robotobold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
