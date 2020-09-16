@@ -1,6 +1,7 @@
 :root {
   --primary-color: #fff;
   --seecondary-color: #323232;
+  --seecondary-lighten-color: #5a5a5a;
   --page-background-green: #849d8f;
   --page-background-blue: #8996a6;
   --page-background-beige: #9d8b84;
@@ -47,4 +48,235 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap;
+}
+
+/* /////////////////////// */
+
+/* ОБЩИЕ СТИЛИ */
+
+body {
+  box-sizing: border-box;
+  font-family: "robotobold", "Arial", sans-serif;
+  font-weight: 700;
+  margin: 0 auto;
+  padding: 0;
+  width: 1200px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn {
+  background: linear-gradient(180deg, #f26843 0%, #e74a35 100%);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+  border-radius: 70px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+/* /////////////////////////// */
+
+/* ВСПОМОГАТЕЛЬНЫЕ СТИЛИ */
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+/* ///////////////////////////////// */
+
+/* СТИЛИ БЛОКОВ */
+
+/* .page-container */
+
+.page-container--first-slide {
+  background-color: var(--page-background-green);
+}
+
+.page-container--second-slide {
+  background-color: var(--page-background-blue);
+}
+
+.page-container--third-slide {
+  background-color: var(--page-background-beige);
+}
+
+/* page-header */
+
+.page-header__logo-pic {
+  background-color: var(--placeholder-color);
+}
+
+.page-header__contacts {
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--primary-color);
+}
+
+.page-header__contacts-tel {
+  font-size: 22px;
+  line-height: 24px;
+  color: var(--primary-color);
+}
+
+/* navigation */
+
+.navigation__item {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--primary-color);
+}
+
+/* catalog */
+
+.catalog__item {
+  font-family: "robotoregular", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--seecondary-color);
+}
+
+.catalog__item--news {
+  font-family: "robotobold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--seecondary-color);
+}
+
+/* carousel */
+
+.carousel__caption {
+  font-size: 60px;
+  line-height: 60px;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.carousel__purchase-link {
+  font-size: 32px;
+  line-height: 44px;
+  color: var(--primary-color);
+}
+
+/* benefits */
+
+.benefits__description {
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--primary-color);
+}
+
+.benefits__slogan {
+  font-size: 35px;
+  line-height: 41px;
+  color: var(--primary-color);
+}
+
+.benefits__purchase-link {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--primary-color);
+}
+
+/* hits */
+
+.hits__pic {
+  background-color: var(--placeholder-color);
+}
+
+.hits__price {
+  font-size: 45px;
+  line-height: 45px;
+  color: var(--primary-color);
+}
+
+.hits__measure {
+  font-size: 30px;
+  line-height: 35px;
+  color: var(--primary-color);
+}
+
+.hits__description-purchase-link {
+  font-family: "robotomedium", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  text-decoration: underline;
+  color: var(--primary-color);
+}
+
+.hits__view-link {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--primary-color);
+}
+
+/* features */
+
+.features__intro {
+  font-family: "robotomedium", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--seecondary-color);
+}
+
+.features__feature {
+  font-family: "robotoregular", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--seecondary-color);
+}
+
+/* articles */
+
+.articles__content-caption {
+  font-family: "robotomedium", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--seecondary-color);
+}
+
+.articles__content-link {
+  font-family: "robotoregular", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  text-decoration: underline;
+  color: var(--seecondary-color);
+}
+
+/* mailing */
+
+.mailing__intro {
+  font-family: "robotoregular", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--seecondary-lighten-color);
+}
+
+.mailing__submit-button {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--primary-color);
 }
