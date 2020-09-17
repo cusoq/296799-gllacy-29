@@ -144,6 +144,10 @@ a {
 
 /* catalog */
 
+.catalog__dropdown-list {
+  background-color: var(--primary-color);
+}
+
 .catalog__item {
   font-family: "robotoregular", "Arial", sans-serif;
   font-weight: 400;
@@ -279,4 +283,64 @@ a {
   font-size: 18px;
   line-height: 24px;
   color: var(--primary-color);
+}
+
+/* contacts */
+
+.contacts__map {
+  background-color: var(--placeholder-color);
+}
+
+.contacts__paragraph {
+  font-family: "robotoregular", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--seecondary-color);
+}
+
+.contacts__contact-info {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--seecondary-color);
+}
+
+.contacts__submit-button {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--primary-color);
+}
+
+/* main-footer */
+
+/* more-information */
+
+.more-information__item {
+  font-family: "robotoregular", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--primary-color);
+}
+
+.more-information__item--favorite {
+  font-family: "robotobold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--primary-color);
+}
+
+/* copy */
+
+.copy__info {
+  font-family: "robotoregular", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--primary-color);
+}
+
+.copy__pic {
+  background-color: var(--placeholder-color);
 }

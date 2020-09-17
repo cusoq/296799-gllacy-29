@@ -65,7 +65,7 @@
 
     <!-- КАРУСЕЛЬ названия классов временные для наглядности -->
     <!-- оживлять предполагается при помощи JS -->
-    <div class="carousel">
+    <div class="main-page__carousel carousel">
       <div class="carousel__strawberry">
         <!-- Изображения контентные, тк идёт речь о конкретных продуктах с названием и описанием, которые можно заказать -->
 
@@ -97,7 +97,7 @@
     </div> <!-- Конец дива карусели -->
 
     <!-- БАННЕРЫ -->
-    <aside class="benefits">
+    <aside class="main-page__benefits benefits">
       <h2 class="visually-hidden">Баннеры</h2>
       <div class="benefits__offer">
         <p class="benefits__description"><b class="benefits__slogan">Малинка даром!</b>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
@@ -109,7 +109,7 @@
       </div>
     </aside>
     <!-- БЛОК С ПРИМЕРАМИ ХИТОВ ПРОДАЖ -->
-    <section class="hits">
+    <section class="main-page__hits hits">
       <h2 class="visually-hidden">Хиты продаж</h2>
       <ul class="list">
         <li>
@@ -148,7 +148,7 @@
       </ul>
     </section>
     <!-- ОСНОВНАЯ ИНФА ПРО МАГАЗ -->
-    <section class="features">
+    <section class="main-page__features features">
       <h2 class="visually-hidden">О магазине Глэйси</h2>
       <p class="features__intro">Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</p>
       <ul class="features__list list">
@@ -167,12 +167,12 @@
       </ul>
     </section>
     <!-- БЛОК СО СТАТЬЯМИ ИЛИ ССЫЛКОЙ НА БЛОГ -->
-    <article class="articles">
+    <article class="main-page__articles articles">
       <h2 class="articles__content-caption">Новое в нашем блоге</h2>
       <a class="articles__content-link">10 способов сервировки фруктовых щербетов к столу</a>
     </article>
     <!-- БЛОК ПОДПИСКИ -->
-    <section class="mailing">
+    <section class="main-page__mailing mailing">
       <h2 class="visually-hidden">Подписка на рассылку</h2>
       <p class="mailing__intro">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
 
@@ -184,21 +184,21 @@
       </form>
     </section>
     <!-- БЛОК С КОНТАКТАМИ -->
-    <section class="contacts">
+    <section class="main-page__contacts contacts">
       <h2 class="visually-hidden">Контакты</h2>
-      <div>
+      <div class="contacts__map">
         <iframe src="https://www.google.com/maps/vt/data=b1i1F-55JilL-WViboyqOsIm6UkZK0u5Fh-IqVSU8ewjssxO6dcpyNSg-DE57GwH2xYoXIDeZKlskUBLcqsjwbU45y20xXSDrbeiiXM141tT90wdAGuVQDky_h1EVSjlKwxWhIisnSM4A6UQB_mOaEnOD4Q6s8mM" width="1200" height="430"></iframe>
       </div>
       <!-- СОБСТВЕННО АДРЕС И ТЕЛЕФОН -->
       <div>
-        <p>Адрес главного офиса и офлайн-магазина:<br>
-          <b>ул. Большая Конюшенная, 19/8, Санкт-Петербург</b>
+        <p class="contacts__paragraph">Адрес главного офиса и офлайн-магазина:<br>
+          <b class="contacts__contact-info">ул. Большая Конюшенная, 19/8, Санкт-Петербург</b>
         </p>
-        <p>Для заказов по телефону:<br>
-          <b><a href="tel:88124502525">8 812 450-25-25</a></b><br>
+        <p class="contacts__paragraph">Для заказов по телефону:<br>
+          <b class="contacts__contact-info"><a href="tel:88124502525">8 812 450-25-25</a></b><br>
           (с 10 до 20 ежедневно)
         </p>
-        <button>Форма обратной связи</button>
+        <button class="contacts__submit-button btn">Форма обратной связи</button>
       </div> <!-- конец блока с адресом и телефоном -->
 
       <!-- МОДАЛЬНОЕ ОКНО С ФОРМОЙ ОБРАТНОЙ СВЯЗИ -->
@@ -216,8 +216,8 @@
     </section>
 
   </main>
-  <footer>
-    <section>
+  <footer class="main-footer">
+    <section class="main-footer__social">
       <h2 class="visually-hidden">Ссылки на соцсети</h2>
       <ul class="list">
         <li>
@@ -234,27 +234,27 @@
         </li>
       </ul>
     </section>
-    <section>
+    <section class="main-footer__mere-information more-information">
       <h2 class="visually-hidden">Юридическая информация</h2>
-      <ul class="list">
-        <li>
+      <ul class="more-information__list list">
+        <li class="more-information__item more-information__item--favorite">
           <a href="">Для поставщиков</a>
         </li>
-        <li>
+        <li class="more-information__item more-information">
           <a href="">Наши документы</a>
         </li>
-        <li>
+        <li class="more-information__item more-information">
           <a href="">О производстве</a>
         </li>
-        <li>
+        <li class="more-information__item more-information">
           <a href="">Экологические стандарты</a>
         </li>
       </ul>
     </section>
-    <div>
+    <div class="main-footer__copy copy">
       <h2 class="visually-hidden">Логотип и копирайт</h2>
-      <p>
-        <a href="https://htmlacademy.ru"><img src="https://via.placeholder.com/100x39" width="100" height="39" alt="Логотип"></a>
+      <p class="copy__info">
+        <a href="https://htmlacademy.ru"><img class="copy__pic" src="https://via.placeholder.com/100x39" width="100" height="39" alt="Логотип"></a>
         Сделано в HTML Academy © 2019
       </p>
     </div>
