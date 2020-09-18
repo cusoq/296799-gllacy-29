@@ -22,7 +22,7 @@
 /* ШРИФТЫ */
 
 @font-face {
-  font-family: "robotoregular";
+  font-family: "Roboto";
   src:
     url("../fonts/roboto.woff2") format("woff2"),
     url("../fonts/roboto.woff") format("woff");
@@ -32,7 +32,7 @@
 }
 
 @font-face {
-  font-family: "robotomedium";
+  font-family: "Roboto";
   src:
     url("../fonts/robotomedium.woff2") format("woff2"),
     url("../fonts/robotomedium.woff") format("woff");
@@ -42,7 +42,7 @@
 }
 
 @font-face {
-  font-family: "robotobold";
+  font-family: "Roboto";
   src:
     url("../fonts/robotobold.woff2") format("woff2"),
     url("../fonts/robotobold.woff") format("woff");
@@ -129,6 +129,10 @@ a {
   background-color: var(--page-background-beige);
 }
 
+.page-container--catalog {
+  background-color: var(--page-background-green);
+}
+
 /* page-header */
 
 .page-header__logo-pic {
@@ -177,6 +181,11 @@ a {
   font-size: 22px;
   line-height: 24px;
   color: var(--primary-color);
+}
+
+.page-header__contacts-tel:hover,
+.page-header__contacts-tel:active {
+  color: var(--active-link-pale);
 }
 
 /* navigation */
