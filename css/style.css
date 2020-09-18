@@ -57,7 +57,7 @@
 
 body {
   box-sizing: border-box;
-  font-family: "robotobold", "Arial", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-weight: 700;
   margin: 0 auto;
   padding: 0;
@@ -144,7 +144,6 @@ a {
 }
 
 .page-header__authorization-link {
-  font-family: "robotomedium", "Arial", sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
@@ -158,7 +157,6 @@ a {
 }
 
 .page-header__cart-button {
-  font-family: "robotomedium", "Arial", sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
@@ -216,7 +214,6 @@ a {
 }
 
 .catalog__item {
-  font-family: "robotoregular", "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
@@ -232,7 +229,6 @@ a {
 }
 
 .catalog__item--current {
-  font-family: "robotoregular", "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
@@ -241,11 +237,18 @@ a {
 }
 
 .catalog__item--news {
-  font-family: "robotobold", "Arial", sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
   color: var(--seecondary-color);
+}
+
+/* main-page */
+
+.main-page__caption {
+  font-size: 35px;
+  line-height: 41px;
+  color: var(--primary-color);
 }
 
 /* carousel */
@@ -302,7 +305,6 @@ a {
 }
 
 .hits__description-purchase-link {
-  font-family: "robotomedium", "Arial", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
@@ -324,7 +326,6 @@ a {
 /* features */
 
 .features__intro {
-  font-family: "robotomedium", "Arial", sans-serif;
   font-weight: 500;
   font-size: 24px;
   line-height: 30px;
@@ -332,7 +333,6 @@ a {
 }
 
 .features__feature {
-  font-family: "robotoregular", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -342,7 +342,6 @@ a {
 /* articles */
 
 .articles__content-caption {
-  font-family: "robotomedium", "Arial", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
@@ -350,7 +349,6 @@ a {
 }
 
 .articles__content-link {
-  font-family: "robotoregular", "Arial", sans-serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 30px;
@@ -366,7 +364,6 @@ a {
 /* mailing */
 
 .mailing__intro {
-  font-family: "robotoregular", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -386,7 +383,6 @@ a {
 }
 
 .contacts__paragraph {
-  font-family: "robotoregular", "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
@@ -421,7 +417,6 @@ a {
 /* more-information */
 
 .more-information__item {
-  font-family: "robotoregular", "Arial", sans-serif;
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
@@ -434,7 +429,6 @@ a {
 }
 
 .more-information__item--favorite {
-  font-family: "robotobold", "Arial", sans-serif;
   font-weight: 700;
   font-size: 13px;
   line-height: 18px;
@@ -444,7 +438,6 @@ a {
 /* copy */
 
 .copy__info {
-  font-family: "robotoregular", "Arial", sans-serif;
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
