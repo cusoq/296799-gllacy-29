@@ -15,6 +15,7 @@
   --currentpage-menu-item-background: #d07058;
   --placeholder-color: #999;
   --semitransparent-color: rgba(255, 255, 255, 0.2);
+  --currentsort-list-item-background: #1e90ff;
 }
 
 /* /////////////////////////////// */
@@ -243,14 +244,6 @@ a {
   color: var(--seecondary-color);
 }
 
-/* main-page */
-
-.main-page__caption {
-  font-size: 35px;
-  line-height: 41px;
-  color: var(--primary-color);
-}
-
 /* carousel */
 
 .carousel__caption {
@@ -286,25 +279,25 @@ a {
   color: var(--primary-color);
 }
 
-/* hits */
+/* cards */
 
-.hits__pic {
+.cards__pic {
   background-color: var(--placeholder-color);
 }
 
-.hits__price {
+.cards__price {
   font-size: 45px;
   line-height: 45px;
   color: var(--primary-color);
 }
 
-.hits__measure {
+.cards__measure {
   font-size: 30px;
   line-height: 35px;
   color: var(--primary-color);
 }
 
-.hits__description-purchase-link {
+.cards__description-purchase-link {
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
@@ -312,12 +305,12 @@ a {
   color: var(--primary-color);
 }
 
-.hits__description-purchase-link:hover,
-.hits__description-purchase-link:active {
+.cards__description-purchase-link:hover,
+.cards__description-purchase-link:active {
   color: var(--active-link-pale);
 }
 
-.hits__view-link {
+.cards__view-link {
   font-size: 18px;
   line-height: 24px;
   color: var(--primary-color);
@@ -451,4 +444,85 @@ a {
 
 .copy__pic {
   background-color: var(--placeholder-color);
+}
+
+/* ///////////////////////////// */
+
+/* СТИЛИ ВНУТРЕННЕЙ СТРАНИЦЫ */
+
+/* catalog-main-page */
+
+.catalog-main-page__caption {
+  font-size: 35px;
+  line-height: 41px;
+  color: var(--primary-color);
+}
+
+.catalog-main-page__breadcrumbs {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--primary-color);
+}
+
+.catalog-main-page__breadcrumbs:hover,
+.catalog-main-page__breadcrumbs:active {
+  color: var(--active-link-pale);
+}
+
+/* filters */
+
+.filters__filter-caption {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--primary-color);
+}
+
+.filters__creteria-current {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--seecondary-color);
+  background-color: var(--primary-color);
+}
+
+.filters__creteria-item {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--seecondary-color);
+  background-color: var(--primary-color);
+}
+
+.filters__creteria-item--current {
+  color: var(--primary-color);
+  background-color: var(--currentsort-list-item-background);
+}
+
+/* pagination */
+
+.pagination__item {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--primary-color);
+}
+
+.pagination__item--current {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--seecondary-color);
+  background-color: var(--primary-color);
+}
+
+.pagination__item--back,
+.pagination__item--forward {
+  font-size: 0;
+}
+
+.pagination__item--available:hover,
+.pagination__item--available:active {
+  color: var(--active-link-pale);
 }
