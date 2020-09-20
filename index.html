@@ -15,7 +15,7 @@
 
   <header class="page-header">
     <!-- ЛОГОТИП -->
-    <a class="page-header__logo-link" href=""><img class="page-header__logo-pic" src="https://via.placeholder.com/154x64" width="154" height="64" alt="логотип"></a>
+    <a class="page-header__logo-link" href=""><img class="page-header__logo-pic" src="img/page-logo.svg" width="154" height="64" alt="логотип"></a>
     <!-- НАВИГАЦИЯ ПО САЙТУ -->
     <nav class="page-header__navigation navigation">
       <ul class="navigation__list list">
@@ -67,26 +67,19 @@
     <!-- оживлять предполагается при помощи JS -->
     <div class="main-page__carousel carousel">
       <div class="carousel__strawberry">
-        <!-- Изображения контентные, тк идёт речь о конкретных продуктах с названием и описанием, которые можно заказать -->
-
         <h2 class="carousel__caption">Пломбир с помадкой и клубничный щербет</h2>
         <a class="carousel__purchase-link btn" href="">Давайте оба!</a>
-        <img src="https://via.placeholder.com/367x582" width="716" height="716" alt="Мороженко 1">
-
+        <!-- <img src="https://via.placeholder.com/367x582" width="716" height="716" alt="Мороженко 1"> -->
       </div> <!-- Конец дива первого слайда carousel__strawberry -->
       <div class="carousel__lemon">
-
         <h2 class="carousel__caption">Шоколадный пломбир и лимонный сорбет</h2>
         <a class="carousel__purchase-link btn" href="">Давайте оба!</a>
-        <img src="https://via.placeholder.com/375x582" width="716" height="716" alt="Мороженко 2">
-
+        <!-- <img src="https://via.placeholder.com/375x582" width="716" height="716" alt="Мороженко 2"> -->
       </div> <!-- Конец дива вторго слайда carousel__lemon -->
       <div class="carousel__raspberry">
-
         <h2 class="carousel__caption">Крем-брюле и пломбир с малиновым джемом</h2>
         <a class="carousel__purchase-link btn" href="">Давайте оба!</a>
-        <img src="https://via.placeholder.com/372x584" width="716" height="716" alt="Мороженко 3">
-
+        <!-- <img src="https://via.placeholder.com/372x584" width="716" height="716" alt="Мороженко 3"> -->
       </div> <!-- Конец дива третьего слайда carousel__raspberry -->
       <!-- КОНТРОЛЫ КАРУСЕЛИ -->
       <div>
@@ -116,7 +109,7 @@
           <!-- Решил не оборачивать карточки в <article> (раз уж это необязательно) чтоб не
           городить лишних DOM элементов и визуально не ухудшать читаемость вложенными тегами  -->
           <mark class="visually-hidden">Хит</mark>
-          <img class="cards__pic" src="https://via.placeholder.com/267x267" width="267" height="267" alt="Мороженко 1">
+          <img class="cards__pic" src="img/goods-11-orange.png" width="267" height="267" alt="Купить Сливочное с апельсиновым джемом и цитрусовой стружкой">
           <p class="cards__price">310 ₽<span class="cards__measure">/кг</span></p>
           <h3><a class="cards__description-purchase-link" href="">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
           <a class="cards__view-link btn visually-hidden" href="">Быстрый просмотр</a>
@@ -124,7 +117,7 @@
 
         <li>
           <mark class="visually-hidden">Хит</mark>
-          <img class="cards__pic" src="https://via.placeholder.com/267x267" width="267" height="267" alt="Мороженко 1">
+          <img class="cards__pic" src="img/goods-12-coffee.png" width="267" height="267" alt="Купить Сливочно-кофейное с кусочками шоколада">
           <p class="cards__price">380 ₽<span class="cards__measure">/кг</span></p>
           <h3><a class="cards__description-purchase-link" href="">Сливочно-кофейное с кусочками шоколада</a></h3>
           <a class="cards__view-link btn visually-hidden" href="">Быстрый просмотр</a>
@@ -132,7 +125,7 @@
 
         <li>
           <mark class="visually-hidden">Хит</mark>
-          <img class="cards__pic" src="https://via.placeholder.com/267x267" width="267" height="267" alt="Мороженко 1">
+          <img class="cards__pic" src="img/goods-13-cream-strowberry.png" width="267" height="267" alt="Купить Сливочно-клубничное с присыпкой из белого шоколада">
           <p class="cards__price">355 ₽<span class="cards__measure">/кг</span></p>
           <h3><a class="cards__description-purchase-link" href="">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
           <a class="cards__view-link btn visually-hidden" href="">Быстрый просмотр</a>
@@ -140,7 +133,7 @@
 
         <li>
           <mark class="visually-hidden">Хит</mark>
-          <img class="cards__pic" src="https://via.placeholder.com/267x267" width="267" height="267" alt="Мороженко 1">
+          <img class="cards__pic" src="img/goods-14-caramel.png" width="267" height="267" alt="Купить Сливочное крем-брюле с карамельной подливкой">
           <p class="cards__price">415 ₽<span class="cards__measure">/кг</span></p>
           <h3><a class="cards__description-purchase-link" href="">Сливочное крем-брюле с карамельной подливкой</a></h3>
           <a class="cards__view-link btn visually-hidden" href="">Быстрый просмотр</a>
@@ -187,6 +180,8 @@
     <section class="main-page__contacts contacts">
       <h2 class="visually-hidden">Контакты</h2>
       <div class="contacts__map">
+        <div class="contacts__map-pin">
+        </div>
         <iframe src="https://www.google.com/maps/vt/data=b1i1F-55JilL-WViboyqOsIm6UkZK0u5Fh-IqVSU8ewjssxO6dcpyNSg-DE57GwH2xYoXIDeZKlskUBLcqsjwbU45y20xXSDrbeiiXM141tT90wdAGuVQDky_h1EVSjlKwxWhIisnSM4A6UQB_mOaEnOD4Q6s8mM" width="1200" height="430"></iframe>
       </div>
       <!-- СОБСТВЕННО АДРЕС И ТЕЛЕФОН -->
@@ -254,7 +249,7 @@
     <div class="page-footer__copy copy">
       <h2 class="visually-hidden">Логотип и копирайт</h2>
       <p class="copy__info">
-        <a href="https://htmlacademy.ru"><img class="copy__pic" src="https://via.placeholder.com/100x39" width="100" height="39" alt="Логотип"></a>
+        <a сclass="copy__logo" href="https://htmlacademy.ru"><img class="copy__pic" src="img/academy-logo.svg" width="100" height="39" alt="Переход на страницу Академии, логотип Академии"></a>
         Сделано в HTML Academy © 2019
       </p>
     </div>

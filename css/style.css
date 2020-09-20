@@ -283,6 +283,7 @@ a {
 
 .cards__pic {
   background-color: var(--placeholder-color);
+  border-radius: 50%;
 }
 
 .cards__price {
@@ -435,11 +436,6 @@ a {
   font-size: 13px;
   line-height: 18px;
   color: var(--primary-color);
-}
-
-.copy__info:hover,
-.copy__info:active {
-  color: var(--active-link-pale);
 }
 
 .copy__pic {
