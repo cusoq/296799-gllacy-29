@@ -21,7 +21,7 @@
       <ul class="navigation__list list">
         <li class="navigation__item catalog"><span tabindex="0">Каталог</span>
           <!-- ВЫПАДАЮЩЕЕ МЕНЮ КАТАЛОГА -->
-          <ul class="catalog__dropdown-list list">
+          <ul class="catalog__dropdown-list list visually-hidden">
             <li class="catalog__item catalog__item--news"><a href="">Новинки</a></li>
             <li class="catalog__item"><a href="inner.html">Сливочное</a></li>
             <li class="catalog__item"><a href="">Щербеты</a></li>
@@ -31,32 +31,39 @@
         </li>
         <li class="navigation__item"><a href="">Доставка и оплата</a></li>
         <li class="navigation__item"><a href="">О компании</a></li>
+        <!-- <li class="navigation__item"><a href="">Переполнение</a></li>
+        <li class="navigation__item"><a href="">Переполнение</a></li>
+        <li class="navigation__item"><a href="">Переполнение</a></li> -->
       </ul><!-- конец навигации -->
     </nav>
-
-    <!-- ПОИСК ПО САЙТУ -->
-    <button class="page-header__search-button"></button>
-    <div>
-      <!-- ФОРМА ПОИСКА -->
-      <!-- <form action="#" method="get">
+    <div class="page-header__interactive-container">
+      <!-- ПОИСК ПО САЙТУ -->
+      <a class="page-header__search-link" href=""></a>
+      <div class="visually-hidden">
+        <!-- ФОРМА ПОИСКА -->
+        <!-- <form action="#" method="get">
         <label class="visually-hidden" for="search-id">Поиск по сайту</label>
         <input class="visually-hidden" type="search" id="search-id" name="search" placeholder="Крем-брюле">
       </form> -->
-    </div><!-- конец модального окна поиска -->
+      </div><!-- конец модального окна поиска -->
 
-    <!-- АВТОРИЗАЦИЯ -->
-    <a class="page-header__authorization-link" href="">Вход</a> <!-- ссылка, т.к. в случае неработающего js будет вести на другую страницу -->
-    <div>
-      <!-- ФОРМА АВТОРИЗАЦИИ -->
-    </div><!-- конец модального окна авторизации -->
+      <!-- АВТОРИЗАЦИЯ -->
+      <!-- <a class="page-header__authorization-link" href="">Переполнение</a>
+      <a class="page-header__authorization-link" href="">Переполнение</a>
+      <a class="page-header__authorization-link" href="">Переполнение</a> -->
+      <a class="page-header__authorization-link" href="">Вход</a> <!-- ссылка, т.к. в случае неработающего js будет вести на другую страницу -->
+      <div class="visually-hidden">
+        <!-- ФОРМА АВТОРИЗАЦИИ -->
+      </div><!-- конец модального окна авторизации -->
 
-    <!-- КНОПКА ДОБАВЛЕНИЯ ТОВАРА -->
-    <button class="page-header__cart-button">Пусто</button>
-    <div>
-      <!-- МОДАЛЬНОЕ ОКНО ПРОСМОТРА КОРЗИНЫ И ЗАКАЗА -->
-    </div><!-- конец модального окна корзины -->
+      <!-- КНОПКА ДОБАВЛЕНИЯ ТОВАРА -->
+      <a class="page-header__cart-link" href="">Пусто</a>
+      <div class="visually-hidden">
+        <!-- МОДАЛЬНОЕ ОКНО ПРОСМОТРА КОРЗИНЫ И ЗАКАЗА -->
+      </div><!-- конец модального окна корзины -->
+    </div><!-- конец конейнера интерактивных элементов -->
     <!-- ЗВОНИТЬ СЮДА -->
-    <p class="page-header__contacts">с 10 до 20, ежедневно<a class="page-header__contacts-tel" href="tel:88124502525">8 812 450-25-25</a></p>
+    <p class="page-header__contacts">с 10 до 20, ежедневно<br><a class="page-header__contacts-tel" href="tel:88124502525">8 812 450-25-25</a></p>
 
   </header>
   <!-- ///////////////////// -->
@@ -66,12 +73,12 @@
     <!-- КАРУСЕЛЬ названия классов временные для наглядности -->
     <!-- оживлять предполагается при помощи JS -->
     <div class="main-page__carousel carousel">
-      <div class="carousel__strawberry">
+      <div class="carousel__strawberry visually-hidden">
         <h2 class="carousel__caption">Пломбир с помадкой и клубничный щербет</h2>
         <a class="carousel__purchase-link btn" href="">Давайте оба!</a>
         <!-- <img src="https://via.placeholder.com/367x582" width="716" height="716" alt="Мороженко 1"> -->
       </div> <!-- Конец дива первого слайда carousel__strawberry -->
-      <div class="carousel__lemon">
+      <div class="carousel__lemon visually-hidden">
         <h2 class="carousel__caption">Шоколадный пломбир и лимонный сорбет</h2>
         <a class="carousel__purchase-link btn" href="">Давайте оба!</a>
         <!-- <img src="https://via.placeholder.com/375x582" width="716" height="716" alt="Мороженко 2"> -->
@@ -82,7 +89,8 @@
         <!-- <img src="https://via.placeholder.com/372x584" width="716" height="716" alt="Мороженко 3"> -->
       </div> <!-- Конец дива третьего слайда carousel__raspberry -->
       <!-- КОНТРОЛЫ КАРУСЕЛИ -->
-      <div>
+      <div class="visually-hidden">
+        <!-- Временно скрыл, чтоб не мешали потоку -->
         <button></button>
         <button></button>
         <button></button>
@@ -104,8 +112,8 @@
     <!-- БЛОК С ПРИМЕРАМИ ХИТОВ ПРОДАЖ -->
     <section class="main-page__cards cards">
       <h2 class="visually-hidden">Хиты продаж</h2>
-      <ul class="list">
-        <li>
+      <ul class="cards__list list">
+        <li class="cards__item">
           <!-- Решил не оборачивать карточки в <article> (раз уж это необязательно) чтоб не
           городить лишних DOM элементов и визуально не ухудшать читаемость вложенными тегами  -->
           <mark class="visually-hidden">Хит</mark>
@@ -115,7 +123,7 @@
           <a class="cards__view-link btn visually-hidden" href="">Быстрый просмотр</a>
         </li> <!-- конец первой карточки списка -->
 
-        <li>
+        <li class="cards__item">
           <mark class="visually-hidden">Хит</mark>
           <img class="cards__pic" src="img/goods-12-coffee.png" width="267" height="267" alt="Купить Сливочно-кофейное с кусочками шоколада">
           <p class="cards__price">380 ₽<span class="cards__measure">/кг</span></p>
@@ -123,7 +131,7 @@
           <a class="cards__view-link btn visually-hidden" href="">Быстрый просмотр</a>
         </li> <!-- конец второй карточки списка -->
 
-        <li>
+        <li class="cards__item">
           <mark class="visually-hidden">Хит</mark>
           <img class="cards__pic" src="img/goods-13-cream-strowberry.png" width="267" height="267" alt="Купить Сливочно-клубничное с присыпкой из белого шоколада">
           <p class="cards__price">355 ₽<span class="cards__measure">/кг</span></p>
@@ -131,7 +139,7 @@
           <a class="cards__view-link btn visually-hidden" href="">Быстрый просмотр</a>
         </li> <!-- конец третьей карточки списка -->
 
-        <li>
+        <li class="cards__item">
           <mark class="visually-hidden">Хит</mark>
           <img class="cards__pic" src="img/goods-14-caramel.png" width="267" height="267" alt="Купить Сливочное крем-брюле с карамельной подливкой">
           <p class="cards__price">415 ₽<span class="cards__measure">/кг</span></p>
@@ -145,47 +153,51 @@
       <h2 class="visually-hidden">О магазине Глэйси</h2>
       <p class="features__intro">Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</p>
       <ul class="features__list list">
-        <li>
+        <li class="features__item features__item--ice-cream">
           <p class="features__feature">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
         </li>
-        <li>
+        <li class="features__item features__item--beaf">
           <p class="features__feature">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
         </li>
-        <li>
+        <li class="features__item features__item--leaf">
           <p class="features__feature">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
         </li>
-        <li>
+        <li class="features__item features__item--freeze">
           <p class="features__feature">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
         </li>
       </ul>
     </section>
-    <!-- БЛОК СО СТАТЬЯМИ ИЛИ ССЫЛКОЙ НА БЛОГ -->
-    <article class="main-page__articles articles">
-      <h2 class="articles__content-caption">Новое в нашем блоге</h2>
-      <a class="articles__content-link">10 способов сервировки фруктовых щербетов к столу</a>
-    </article>
-    <!-- БЛОК ПОДПИСКИ -->
-    <section class="main-page__mailing mailing">
-      <h2 class="visually-hidden">Подписка на рассылку</h2>
-      <p class="mailing__intro">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
 
-      <!-- ПОЛЕ ВВОДА ПОЧТОВОГО АДРЕСА -->
-      <form action="#" method="post">
-        <input type="email" name="email" placeholder="email@example.com">
-        <!-- КНОПКА ОТПРАВКИ -->
-        <button class="mailing__submit-button btn">Отправить</button>
-      </form>
-    </section>
+    <div class="main-page__article-mailing-wrapper">
+      <!-- БЛОК СО СТАТЬЯМИ ИЛИ ССЫЛКОЙ НА БЛОГ -->
+      <article class="main-page__articles articles">
+        <h2 class="articles__content-caption">Новое в нашем блоге</h2>
+        <a class="articles__content-link">10 способов сервировки фруктовых щербетов к столу</a>
+      </article>
+      <!-- БЛОК ПОДПИСКИ -->
+      <section class="main-page__mailing mailing">
+        <h2 class="visually-hidden">Подписка на рассылку</h2>
+        <p class="mailing__intro">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+
+        <!-- ПОЛЕ ВВОДА ПОЧТОВОГО АДРЕСА -->
+        <form action="#" method="post">
+          <input type="email" name="email" placeholder="email@example.com">
+          <!-- КНОПКА ОТПРАВКИ -->
+          <button class="mailing__submit-button btn">Отправить</button>
+        </form>
+      </section>
+    </div><!-- конец враппера статей и рассылок -->
     <!-- БЛОК С КОНТАКТАМИ -->
     <section class="main-page__contacts contacts">
       <h2 class="visually-hidden">Контакты</h2>
       <div class="contacts__map">
         <div class="contacts__map-pin">
         </div>
-        <iframe src="https://www.google.com/maps/vt/data=b1i1F-55JilL-WViboyqOsIm6UkZK0u5Fh-IqVSU8ewjssxO6dcpyNSg-DE57GwH2xYoXIDeZKlskUBLcqsjwbU45y20xXSDrbeiiXM141tT90wdAGuVQDky_h1EVSjlKwxWhIisnSM4A6UQB_mOaEnOD4Q6s8mM" width="1200" height="430"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1600943056077!5m2!1sru!2sru"
+          width="1200" height="430" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       </div>
       <!-- СОБСТВЕННО АДРЕС И ТЕЛЕФОН -->
-      <div>
+      <div class="contacts__all-contacts">
         <p class="contacts__paragraph">Адрес главного офиса и офлайн-магазина:<br>
           <b class="contacts__contact-info">ул. Большая Конюшенная, 19/8, Санкт-Петербург</b>
         </p>
@@ -214,7 +226,7 @@
   <footer class="page-footer">
     <section class="page-footer__social social">
       <h2 class="visually-hidden">Ссылки на соцсети</h2>
-      <ul class="list">
+      <ul class="social__list list">
         <li>
           <a class="social__link" href="">Фейсбук</a>
         </li>
@@ -249,7 +261,7 @@
     <div class="page-footer__copy copy">
       <h2 class="visually-hidden">Логотип и копирайт</h2>
       <p class="copy__info">
-        <a сclass="copy__logo" href="https://htmlacademy.ru"><img class="copy__pic" src="img/academy-logo.svg" width="100" height="39" alt="Переход на страницу Академии, логотип Академии"></a>
+        <a href="https://htmlacademy.ru"><img class="copy__pic" src="img/academy-logo.svg" width="100" height="39" alt="Переход на страницу Академии, логотип Академии"></a><br>
         Сделано в HTML Academy © 2019
       </p>
     </div>
