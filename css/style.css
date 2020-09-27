@@ -371,8 +371,16 @@ a {
 
 /* cards */
 
-.cards__list {
+.cards__list--hits {
   display: flex;
+  justify-content: space-between;
+  margin: 0;
+  background-color: khaki;
+}
+
+.cards__list--goods {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 267px);
   justify-content: space-between;
   margin: 0;
   background-color: khaki;
@@ -675,17 +683,30 @@ a {
 
 /* catalog-main-page */
 
+.catalog-main-page {
+  position: relative;
+  background-color: bisque;
+}
+
 .catalog-main-page__caption {
   font-size: 35px;
   line-height: 41px;
   color: var(--primary-color);
+  margin: 0 0 30px 0;
 }
 
 .catalog-main-page__breadcrumbs {
+  position: absolute;
+  top: -35px;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
   color: var(--primary-color);
+  width: 224px;
+  outline: 3px dotted lime;
 }
 
 .catalog-main-page__breadcrumbs:hover,
@@ -695,11 +716,63 @@ a {
 
 /* filters */
 
+.filters__list {
+  display: grid;
+  grid-template-columns: 196px 218px 268px 144px;
+  grid-template-rows:
+    56px
+    60px;
+  gap: 14px;
+  margin: 0 0 20px 0;
+  width: 869px;
+  min-height: 130px;
+  background-color: coral;
+}
+
+.filters__item {
+  outline: 3px dotted rebeccapurple;
+}
+
+.filters__item--creteria-sort {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.filters__item--price-sort {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.filters__item--fat-content-sort {
+  grid-column: 3 / 5;
+  grid-row: 1 / 2;
+}
+
+.filters__item--complement-sort {
+  grid-column: 1 / -2;
+  grid-row: 2 / 3;
+}
+
+.filters__item--submit {
+  grid-column: -2 / -1;
+  grid-row: 2 / 3;
+}
+
 .filters__filter-caption {
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
   color: var(--primary-color);
+  margin: 0;
+}
+
+.filters__creteria-default {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--primary-color);
+
+  /* background-color: var(--primary-color); */
 }
 
 .filters__creteria-current {
@@ -725,17 +798,30 @@ a {
 
 /* pagination */
 
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  margin: 30px 0;
+  outline: 3px dotted yellow;
+}
+
 .pagination__item {
   font-weight: 500;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 26px;
+  text-align: center;
   color: var(--primary-color);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: plum;
 }
 
 .pagination__item--current {
   font-weight: 500;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 26px;
+  text-align: center;
   color: var(--seecondary-color);
   background-color: var(--primary-color);
 }
@@ -743,6 +829,9 @@ a {
 .pagination__item--back,
 .pagination__item--forward {
   font-size: 0;
+  border-radius: 0;
+  width: 7px;
+  background-color: aqua;
 }
 
 .pagination__item--available:hover,

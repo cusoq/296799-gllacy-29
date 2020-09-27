@@ -21,7 +21,7 @@
       <ul class="navigation__list list">
         <li class="navigation__item navigation__item--current catalog"><span tabindex="0">Каталог</span>
           <!-- ВЫПАДАЮЩЕЕ МЕНЮ КАТАЛОГА -->
-          <ul class="catalog__dropdown-list list">
+          <ul class="catalog__dropdown-list visually-hidden list">
             <li class="catalog__item catalog__item--news"><a href="">Новинки</a></li>
             <li class="catalog__item"><a href="">Сливочное</a></li> <!-- не активна -->
             <li class="catalog__item"><a href="">Щербеты</a></li>
@@ -74,11 +74,11 @@
     <!-- БЛОК С ФИЛЬТРАМИ -->
     <section class="catalog-main-page__filters filters">
       <h2 class="visually-hidden">Фильтры</h2>
-      <ul class="list">
-        <li>
+      <ul class="filters__list list">
+        <li class="filters__item filters__item--creteria-sort">
           <h3 class="filters__filter-caption">Сортировка:</h3>
-          <span class="filters__creteria-current" tabindex="0">по популярности</span>
-          <ul class="filters__creteria-list list">
+          <span class="filters__creteria-default" tabindex="0">по популярности</span>
+          <ul class="filters__creteria-list visually-hidden list">
             <li class="filters__creteria-item filters__creteria-item--current">по популярности</li>
             <li class="filters__creteria-item">сначала недорогие</li>
             <li class="filters__creteria-item">сначала дорогие</li>
@@ -86,22 +86,22 @@
           </ul><!-- конец сортировки по общим признакам -->
         </li>
 
-        <li>
+        <li class="filters__item filters__item--price-sort">
           <h3 class="filters__filter-caption">Цена: 100 ₽ – 500 ₽</h3>
           <!-- ФОРМА type="range" ФИЛЬТРА ПО ЦЕНЕ -->
         </li>
 
-        <li>
+        <li class="filters__item filters__item--fat-content-sort">
           <h3 class="filters__filter-caption">Жирность:</h3>
           <!-- ФОРМА type="radio" ФИЛЬТРА ПО ЖИРНОСТИ -->
         </li>
 
-        <li>
+        <li class="filters__item filters__item--complement-sort">
           <h3 class="filters__filter-caption">Наполнители:</h3>
           <!-- ФОРМА type="checkbox" ФИЛЬТРА ПО НАПОЛНИТЕЛЯМ -->
         </li>
 
-        <li>
+        <li class="filters__item filters__item--submit">
           <h3 class="visually-hidden">Кнопка отправки формы</h3>
           <button type="submit">Применить</button>
         </li>
@@ -111,8 +111,8 @@
     <!-- БЛОК С ТОВАРАМИ -->
     <section class="catalog-main-page__cards cards">
       <h2 class="visually-hidden">Список товаров</h2>
-      <ul class="list">
-        <li>
+      <ul class="cards__list cards__list--goods list">
+        <li class="cards__item">
           <img class="cards__pic" src="img/goods-11-orange.png" width="267" height="267" alt="Купить Сливочное с апельсиновым джемом и цитрусовой стружкой">
           <p class="cards__price">310 ₽<span class="cards__measure">/кг</span></p>
           <h3><a class="cards__description-purchase-link" href="">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
@@ -120,7 +120,7 @@
         </li>
 
 
-        <li>
+        <li class="cards__item">
           <img class="cards__pic" src="img/goods-12-coffee.png" width="267" height="267" alt="Купить Сливочно-кофейное с кусочками шоколада">
           <p class="cards__price">380 ₽<span class="cards__measure">/кг</span></p>
           <h3><a class="cards__description-purchase-link" href="">Сливочно-кофейное с кусочками шоколада</a></h3>
@@ -128,7 +128,7 @@
         </li>
 
 
-        <li>
+        <li class="cards__item">
           <img class="cards__pic" src="img/goods-13-cream-strowberry.png" width="267" height="267" alt="Купить Сливочно-клубничное с присыпкой из белого шоколада">
           <p class="cards__price">355 ₽<span class="cards__measure">/кг</span></p>
           <h3><a class="cards__description-purchase-link" href="">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
@@ -136,7 +136,7 @@
         </li>
 
 
-        <li>
+        <li class="cards__item">
           <img class="cards__pic" src="img/goods-14-caramel.png" width="267" height="267" alt="Купить Сливочное крем-брюле с карамельной подливкой">
           <p class="cards__price">415 ₽<span class="cards__measure">/кг</span></p>
           <h3><a class="cards__description-purchase-link" href="">Сливочное крем-брюле с карамельной подливкой</a></h3>
@@ -144,7 +144,7 @@
         </li>
 
 
-        <li>
+        <li class="cards__item">
           <img class="cards__pic" src="img/goods-21-lingonberry.png" width="267" height="267" alt="Купить Сливочное с брусничным джемом">
           <p class="cards__price">325 ₽<span class="cards__measure">/кг</span></p>
           <h3><a class="cards__description-purchase-link" href="">Сливочное с брусничным джемом</a></h3>
@@ -152,7 +152,7 @@
         </li>
 
 
-        <li>
+        <li class="cards__item">
           <img class="cards__pic" src="img/goods-22-blueberry.png" width="267" height="267" alt="Купить Сливочно-черничное с цельными ягодами черники">
           <p class="cards__price">410 ₽<span class="cards__measure">/кг</span></p>
           <h3><a class="cards__description-purchase-link" href="">Сливочно-черничное с цельными ягодами черники</a></h3>
@@ -160,7 +160,7 @@
         </li>
 
 
-        <li>
+        <li class="cards__item">
           <img class="cards__pic" src="img/goods-23-lemon.png" width="267" height="267" alt="Купить Сливочно-лимонное с карамельной присыпкой">
           <p class="cards__price">315 ₽<span class="cards__measure">/кг</span></p>
           <h3><a class="cards__description-purchase-link" href="">Сливочно-лимонное с карамельной присыпкой</a></h3>
@@ -168,7 +168,7 @@
         </li>
 
 
-        <li>
+        <li class="cards__item">
           <img class="cards__pic" src="img/goods-24-cream-chocolate.png" width="267" height="267" alt="Купить Сливочное с шоколадной стружкой">
           <p class="cards__price">320 ₽<span class="cards__measure">/кг</span></p>
           <h3><a class="cards__description-purchase-link" href="">Сливочное с шоколадной стружкой</a></h3>
@@ -176,7 +176,7 @@
         </li>
 
 
-        <li>
+        <li class="cards__item">
           <img class="cards__pic" src="img/goods-31-vanilla.png" width="267" height="267" alt="Купить Сливочно-ванильное с кусочками шоколада">
           <p class="cards__price">440 ₽<span class="cards__measure">/кг</span></p>
           <h3><a class="cards__description-purchase-link" href="">Сливочно-ванильное с кусочками шоколада</a></h3>
@@ -184,7 +184,7 @@
         </li>
 
 
-        <li>
+        <li class="cards__item">
           <img class="cards__pic" src="img/goods-32-menthol.png" width="267" height="267" alt="Купить Сливочноe с ментоловым сиропом">
           <p class="cards__price">435 ₽<span class="cards__measure">/кг</span></p>
           <h3><a class="cards__description-purchase-link" href="">Сливочноe с ментоловым сиропом</a></h3>
@@ -192,7 +192,7 @@
         </li>
 
 
-        <li>
+        <li class="cards__item">
           <img class="cards__pic" src="img/goods-33-black-chocolate.png" width="267" height="267" alt="Купить Сливочное с кусочками черного шоколада">
           <p class="cards__price">355 ₽<span class="cards__measure">/кг</span></p>
           <h3><a class="cards__description-purchase-link" href="">Сливочное с кусочками черного шоколада</a></h3>
@@ -200,7 +200,7 @@
         </li>
 
 
-        <li>
+        <li class="cards__item">
           <img class="cards__pic" src="img/goods-34-mint.png" width="267" height="267" alt="Купить Сливочное с мятным сиропом">
           <p class="cards__price">420 ₽<span class="cards__measure">/кг</span></p>
           <h3><a class="cards__description-purchase-link" href="">Сливочное с мятным сиропом</a></h3>
@@ -224,7 +224,7 @@
   <footer class="page-footer">
     <section class="page-footer__social social">
       <h2 class="visually-hidden">Ссылки на соцсети</h2>
-      <ul class="list">
+      <ul class="social__list list">
         <li>
           <a class="social__link" href="">Фейсбук</a>
         </li>
@@ -259,7 +259,7 @@
     <div class="page-footer__copy copy">
       <h2 class="visually-hidden">Логотип и копирайт</h2>
       <p class="copy__info">
-        <a href="https://htmlacademy.ru"><img class="copy__pic" src="img/academy-logo.svg" width="100" height="39" alt="Переход на страницу Академии, логотип Академии"></a>
+        <a href="https://htmlacademy.ru"><img class="copy__pic" src="img/academy-logo.svg" width="100" height="39" alt="Переход на страницу Академии, логотип Академии"></a><br>
         Сделано в HTML Academy © 2019
       </p>
     </div>
