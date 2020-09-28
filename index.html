@@ -11,7 +11,7 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body class="page-container page-container--first-slide">
+<body class="page-container page-container--third-slide">
 
   <header class="page-header">
     <!-- ЛОГОТИП -->
@@ -21,7 +21,7 @@
       <ul class="navigation__list list">
         <li class="navigation__item catalog"><span tabindex="0">Каталог</span>
           <!-- ВЫПАДАЮЩЕЕ МЕНЮ КАТАЛОГА -->
-          <ul class="catalog__dropdown-list list">
+          <ul class="catalog__dropdown-list list visually-hidden">
             <li class="catalog__item catalog__item--news"><a href="">Новинки</a></li>
             <li class="catalog__item"><a href="inner.html">Сливочное</a></li>
             <li class="catalog__item"><a href="">Щербеты</a></li>
@@ -73,27 +73,23 @@
     <!-- КАРУСЕЛЬ названия классов временные для наглядности -->
     <!-- оживлять предполагается при помощи JS -->
     <div class="main-page__carousel carousel">
-      <div class="carousel__strawberry visually-hidden">
+      <div class="carousel__strawberry">
         <h2 class="carousel__caption">Пломбир с помадкой и клубничный щербет</h2>
         <a class="carousel__purchase-link btn" href="">Давайте оба!</a>
-        <!-- <img src="https://via.placeholder.com/367x582" width="716" height="716" alt="Мороженко 1"> -->
       </div> <!-- Конец дива первого слайда carousel__strawberry -->
       <div class="carousel__lemon visually-hidden">
         <h2 class="carousel__caption">Шоколадный пломбир и лимонный сорбет</h2>
         <a class="carousel__purchase-link btn" href="">Давайте оба!</a>
-        <!-- <img src="https://via.placeholder.com/375x582" width="716" height="716" alt="Мороженко 2"> -->
       </div> <!-- Конец дива вторго слайда carousel__lemon -->
-      <div class="carousel__raspberry">
+      <div class="carousel__raspberry visually-hidden">
         <h2 class="carousel__caption">Крем-брюле и пломбир с малиновым джемом</h2>
         <a class="carousel__purchase-link btn" href="">Давайте оба!</a>
-        <!-- <img src="https://via.placeholder.com/372x584" width="716" height="716" alt="Мороженко 3"> -->
       </div> <!-- Конец дива третьего слайда carousel__raspberry -->
       <!-- КОНТРОЛЫ КАРУСЕЛИ -->
-      <div class="visually-hidden">
-        <!-- Временно скрыл, чтоб не мешали потоку -->
-        <button></button>
-        <button></button>
-        <button></button>
+      <div class="carousel__controls">
+        <button class="carousel__control"></button>
+        <button class="carousel__control"></button>
+        <button class="carousel__control carousel__control--selected"></button>
       </div>
     </div> <!-- Конец дива карусели -->
 

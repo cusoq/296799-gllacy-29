@@ -121,14 +121,23 @@ a {
 
 .page-container--first-slide {
   background-color: var(--page-background-green);
+  background-image: url("../img/1-slide-raspberry.png");
+  background-repeat: no-repeat;
+  background-position: center 0;
 }
 
 .page-container--second-slide {
   background-color: var(--page-background-blue);
+  background-image: url("../img/2-slide-lemon.png");
+  background-repeat: no-repeat;
+  background-position: center 0;
 }
 
 .page-container--third-slide {
   background-color: var(--page-background-beige);
+  background-image: url("../img/3-slide-srawberry.png");
+  background-repeat: no-repeat;
+  background-position: center 0;
 }
 
 .page-container--catalog {
@@ -235,6 +244,7 @@ a {
 
 .navigation__list {
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
   width: auto;
 }
@@ -298,19 +308,9 @@ a {
 /* carousel */
 
 .carousel {
-  /* Контейнер для слайдов и заодно распорка между хедером и основным контентом.
-  поэтому высота жёсткая */
-  height: 525px;
-  margin-bottom: 124px;
+  position: relative;
+  padding: 270px 230px 38px 230px;
   outline: 3px dashed aqua;
-}
-
-.carousel__raspberry {
-  padding-top: 358px;
-  margin-top: -124px;
-  height: 716px;
-  background-image: url("../img/1-slide-raspberry.png");
-  background-repeat: no-repeat;
 }
 
 .carousel__caption {
@@ -318,8 +318,7 @@ a {
   line-height: 60px;
   text-align: center;
   color: var(--primary-color);
-  margin: 0 auto;
-  max-width: 716px;
+  margin: 0 auto 25px;
 }
 
 .carousel__purchase-link {
@@ -332,6 +331,28 @@ a {
   margin: 0 auto;
   width: 278px;
   height: 63px;
+}
+
+.carousel__controls {
+  position: absolute;
+  top: 85%;
+  left: 5%;
+  display: flex;
+  justify-content: space-between;
+  width: 80px;
+  background-color: coral;
+}
+
+.carousel__control {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+  background-color: transparent;
+}
+
+.carousel__control--selected {
+  background-color: var(--primary-color);
 }
 
 /* benefits */
@@ -375,7 +396,6 @@ a {
   display: flex;
   justify-content: space-between;
   margin: 0;
-  background-color: khaki;
 }
 
 .cards__list--goods {
