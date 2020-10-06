@@ -19,9 +19,9 @@
     <!-- НАВИГАЦИЯ ПО САЙТУ -->
     <nav class="page-header__navigation navigation">
       <ul class="navigation__list list">
-        <li class="navigation__item catalog"><span tabindex="0">Каталог</span>
+        <li class="navigation__item catalog"><a href="">Каталог</a>
           <!-- ВЫПАДАЮЩЕЕ МЕНЮ КАТАЛОГА -->
-          <ul class="catalog__dropdown-list list visually-hidden">
+          <ul class="catalog__dropdown-list list">
             <li class="catalog__item catalog__item--news"><a href="">Новинки</a></li>
             <li class="catalog__item"><a href="inner.html">Сливочное</a></li>
             <li class="catalog__item"><a href="">Щербеты</a></li>
@@ -31,29 +31,32 @@
         </li>
         <li class="navigation__item"><a href="">Доставка и оплата</a></li>
         <li class="navigation__item"><a href="">О компании</a></li>
-        <!-- <li class="navigation__item"><a href="">Переполнение</a></li>
-        <li class="navigation__item"><a href="">Переполнение</a></li>
-        <li class="navigation__item"><a href="">Переполнение</a></li> -->
       </ul><!-- конец навигации -->
     </nav>
     <div class="page-header__interactive-container">
       <!-- ПОИСК ПО САЙТУ -->
       <a class="page-header__search-link" href=""></a>
-      <div class="visually-hidden">
+      <div class="page-header__search search">
         <!-- ФОРМА ПОИСКА -->
-        <!-- <form action="#" method="get">
+        <form action="#" method="get">
         <label class="visually-hidden" for="search-id">Поиск по сайту</label>
-        <input class="visually-hidden" type="search" id="search-id" name="search" placeholder="Крем-брюле">
-      </form> -->
+        <input class="search__input text-input" type="search" id="search-id" name="search" placeholder="Крем-брюле">
+      </form>
       </div><!-- конец модального окна поиска -->
 
       <!-- АВТОРИЗАЦИЯ -->
-      <!-- <a class="page-header__authorization-link" href="">Переполнение</a>
-      <a class="page-header__authorization-link" href="">Переполнение</a>
-      <a class="page-header__authorization-link" href="">Переполнение</a> -->
       <a class="page-header__authorization-link" href="">Вход</a> <!-- ссылка, т.к. в случае неработающего js будет вести на другую страницу -->
-      <div class="visually-hidden">
+      <div class="page-header__authorization authorization">
         <!-- ФОРМА АВТОРИЗАЦИИ -->
+        <form action="#" method="post">
+        <label class="visually-hidden" for="email-id">Электронная почта</label>
+        <input class="authorization__input text-input" type="email" id="email-id" name="email" placeholder="email@example.com">
+        <label class="visually-hidden" for="password-id">Пароль</label>
+        <input class="authorization__input text-input" type="email" id="password-id" name="password" placeholder="******">
+        <input class="authorization__button btn" type="submit" value="Войти">
+        <p class="authorization__help"><a href="">Забыли пароль?</a><a href="">Новая регистрация</a></p>
+
+      </form>
       </div><!-- конец модального окна авторизации -->
 
       <!-- КНОПКА ДОБАВЛЕНИЯ ТОВАРА -->
@@ -74,7 +77,7 @@
     <!-- оживлять предполагается при помощи JS -->
     <div class="main-page__carousel carousel">
       <div class="carousel__strawberry">
-        <h2 class="carousel__caption">Пломбир с помадкой и клубничный щербет</h2>
+        <h2 class="carousel__caption">Пломбир с помадкой<br> и клубничный щербет</h2>
         <a class="carousel__purchase-link btn" href="">Давайте оба!</a>
       </div> <!-- Конец дива первого слайда carousel__strawberry -->
       <div class="carousel__lemon visually-hidden">
@@ -87,59 +90,59 @@
       </div> <!-- Конец дива третьего слайда carousel__raspberry -->
       <!-- КОНТРОЛЫ КАРУСЕЛИ -->
       <div class="carousel__controls">
-        <button class="carousel__control"></button>
-        <button class="carousel__control"></button>
-        <button class="carousel__control carousel__control--selected"></button>
+        <button class="carousel__control" type="button" aria-label="Первый слайд"></button>
+        <button class="carousel__control" type="button" aria-label="Второй слайд"></button>
+        <button class="carousel__control carousel__control--selected" type="button" aria-label="Третий слайд"></button>
       </div>
     </div> <!-- Конец дива карусели -->
 
     <!-- БАННЕРЫ -->
     <aside class="main-page__benefits benefits">
       <h2 class="visually-hidden">Баннеры</h2>
-      <div class="benefits__offer">
-        <p class="benefits__description"><b class="benefits__slogan">Малинка даром!</b>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+      <div class="benefits__offer benefits__offer--raspberry">
+        <p class="benefits__slogan">Малинка даром!</p>
+        <p class="benefits__description">При покупке 2 кг любого фруктового мороженого, добавим<br> в ваш заказ банку малинового варенья бесплатно.</p>
         <a class="benefits__purchase-link btn" href="">Хочу варенье!</a>
       </div>
-      <div class="benefits__offer">
-        <p class="benefits__description"><b class="benefits__slogan">Шоколадки даром!</b>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-        <a class="benefits__purchase-link btn" href="">Хочу варенье!</a>
+      <div class="benefits__offer benefits__offer--chocolate">
+        <p class="benefits__slogan">Шоколадки даром!</p>
+        <p class="benefits__description">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+        <a class="benefits__purchase-link btn" href="">Хочу шоколадки!</a>
       </div>
     </aside>
     <!-- БЛОК С ПРИМЕРАМИ ХИТОВ ПРОДАЖ -->
     <section class="main-page__cards cards">
       <h2 class="visually-hidden">Хиты продаж</h2>
       <ul class="cards__list cards__list--hits list">
-        <li class="cards__item">
-          <!-- Решил не оборачивать карточки в <article> (раз уж это необязательно) чтоб не
-          городить лишних DOM элементов и визуально не ухудшать читаемость вложенными тегами  -->
+        <li class="cards__item cards__item--hit">
           <mark class="visually-hidden">Хит</mark>
           <img class="cards__pic" src="img/goods-11-orange.png" width="267" height="267" alt="Купить Сливочное с апельсиновым джемом и цитрусовой стружкой">
-          <p class="cards__price">310 ₽<span class="cards__measure">/кг</span></p>
-          <h3><a class="cards__description-purchase-link" href="">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
+          <p class="cards__price">310&nbsp;&#x20BD;<span class="cards__measure">/кг</span></p>
+          <h3 class="cards__caption"><a class="cards__description-purchase-link" href="">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
           <a class="cards__view-link btn visually-hidden" href="">Быстрый просмотр</a>
         </li> <!-- конец первой карточки списка -->
 
-        <li class="cards__item">
+        <li class="cards__item cards__item--hit">
           <mark class="visually-hidden">Хит</mark>
           <img class="cards__pic" src="img/goods-12-coffee.png" width="267" height="267" alt="Купить Сливочно-кофейное с кусочками шоколада">
-          <p class="cards__price">380 ₽<span class="cards__measure">/кг</span></p>
-          <h3><a class="cards__description-purchase-link" href="">Сливочно-кофейное с кусочками шоколада</a></h3>
+          <p class="cards__price">380&nbsp;&#x20BD;<span class="cards__measure">/кг</span></p>
+          <h3 class="cards__caption"><a class="cards__description-purchase-link" href="">Сливочно-кофейное с кусочками шоколада</a></h3>
           <a class="cards__view-link btn visually-hidden" href="">Быстрый просмотр</a>
         </li> <!-- конец второй карточки списка -->
 
-        <li class="cards__item">
+        <li class="cards__item cards__item--hit">
           <mark class="visually-hidden">Хит</mark>
           <img class="cards__pic" src="img/goods-13-cream-strowberry.png" width="267" height="267" alt="Купить Сливочно-клубничное с присыпкой из белого шоколада">
-          <p class="cards__price">355 ₽<span class="cards__measure">/кг</span></p>
-          <h3><a class="cards__description-purchase-link" href="">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
+          <p class="cards__price">355&nbsp;&#x20BD;<span class="cards__measure">/кг</span></p>
+          <h3 class="cards__caption"><a class="cards__description-purchase-link" href="">Сливочно-клубничное<br> с присыпкой из белого шоколада</a></h3>
           <a class="cards__view-link btn visually-hidden" href="">Быстрый просмотр</a>
         </li> <!-- конец третьей карточки списка -->
 
-        <li class="cards__item">
+        <li class="cards__item cards__item--hit">
           <mark class="visually-hidden">Хит</mark>
           <img class="cards__pic" src="img/goods-14-caramel.png" width="267" height="267" alt="Купить Сливочное крем-брюле с карамельной подливкой">
-          <p class="cards__price">415 ₽<span class="cards__measure">/кг</span></p>
-          <h3><a class="cards__description-purchase-link" href="">Сливочное крем-брюле с карамельной подливкой</a></h3>
+          <p class="cards__price">415&nbsp;&#x20BD;<span class="cards__measure">/кг</span></p>
+          <h3 class="cards__caption"><a class="cards__description-purchase-link" href="">Сливочное крем-брюле<br> с карамельной подливкой</a></h3>
           <a class="cards__view-link btn visually-hidden" href="">Быстрый просмотр</a>
         </li> <!-- конец четвёртой карточки списка -->
       </ul>
@@ -167,7 +170,7 @@
     <!-- БЛОК СО СТАТЬЯМИ ИЛИ ССЫЛКОЙ НА БЛОГ -->
     <article class="main-page__articles articles">
       <h2 class="articles__content-caption">Новое в нашем блоге</h2>
-      <a class="articles__content-link">10 способов сервировки фруктовых щербетов к столу</a>
+      <a class="articles__content-link">10 способов сервировки фруктовых щербетов&emsp;<br>&nbsp;к столу</a>
     </article>
     <!-- БЛОК ПОДПИСКИ -->
     <section class="main-page__mailing mailing">
@@ -176,7 +179,7 @@
 
       <!-- ПОЛЕ ВВОДА ПОЧТОВОГО АДРЕСА -->
       <form action="#" method="post">
-        <input type="email" name="email" placeholder="email@example.com">
+        <input class="mailing__input text-input" type="email" name="email" placeholder="email@example.com">
         <!-- КНОПКА ОТПРАВКИ -->
         <button class="mailing__submit-button btn">Отправить</button>
       </form>
@@ -188,12 +191,13 @@
       <div class="contacts__map">
         <div class="contacts__map-pin">
         </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1600943056077!5m2!1sru!2sru"
-          width="1200" height="430" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1600943056077!5m2!1sru!2sru"
+          width="1200" height="430" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+        </iframe> -->
       </div>
       <!-- СОБСТВЕННО АДРЕС И ТЕЛЕФОН -->
       <div class="contacts__all-contacts">
-        <p class="contacts__paragraph">Адрес главного офиса и офлайн-магазина:<br>
+        <p class="contacts__paragraph">Адрес главного офиса<br> и офлайн-магазина:<br>
           <b class="contacts__contact-info">ул. Большая Конюшенная, 19/8, Санкт-Петербург</b>
         </p>
         <p class="contacts__paragraph">Для заказов по телефону:<br>
@@ -223,16 +227,16 @@
       <h2 class="visually-hidden">Ссылки на соцсети</h2>
       <ul class="social__list list">
         <li>
-          <a class="social__link" href="">Фейсбук</a>
+          <a class="social__link social__link--fb" href="">Фейсбук</a>
         </li>
         <li>
-          <a class="social__link" href="">Вконтакте</a>
+          <a class="social__link social__link--vk" href="">Вконтакте</a>
         </li>
         <li>
-          <a class="social__link" href="">Инстаграм</a>
+          <a class="social__link social__link--inst" href="">Инстаграм</a>
         </li>
         <li>
-          <a class="social__link" href="">Твиттер</a>
+          <a class="social__link social__link--tw" href="">Твиттер</a>
         </li>
       </ul>
     </section>
@@ -256,7 +260,7 @@
     <div class="page-footer__copy copy">
       <h2 class="visually-hidden">Логотип и копирайт</h2>
       <p class="copy__info">
-        <a href="https://htmlacademy.ru"><img class="copy__pic" src="img/academy-logo.svg" width="100" height="39" alt="Переход на страницу Академии, логотип Академии"></a><br>
+        <a href="https://htmlacademy.ru"><img class="copy__pic" src="img/academy-logo.svg" width="108" height="39" alt="Переход на страницу Академии, логотип Академии"></a><br>
         Сделано в HTML Academy © 2019
       </p>
     </div>
