@@ -224,9 +224,7 @@ a {
 
 .search {
   box-sizing: border-box;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity ease-in-out 0.7s;
+  display: none;
   position: absolute;
   top: 36px;
   left: -307px;
@@ -240,17 +238,24 @@ a {
   text-align: center;
 }
 
+.search::after {
+  position: absolute;
+  content: "";
+  width: 341px;
+  height: 40px;
+  top: -35px;
+  right: 0;
+}
+
 .search__input {
   width: 311px;
   height: 44px;
 }
 
-.page-header__search-link:hover + .search,
-.page-header__search-link:focus + .search,
-.page-header__search-link__authorization-link:focus-within + .search,
-.search:hover .search {
-  visibility: visible;
-  opacity: 1;
+.page-header__search-container:hover .search,
+.page-header__search-container:focus .search,
+.page-header__search-container:focus-within .search {
+  display: block;
 }
 
 .page-header__authorization-container {
@@ -287,9 +292,7 @@ a {
   position: absolute;
   top: 36px;
   left: -172px;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity ease-in-out 0.7s;
+  display: none;
   width: 277px;
   height: 214px;
   padding: 20px;
@@ -297,6 +300,15 @@ a {
   background-color: var(--input-container-background);
   box-shadow: 0 20px 20px 0  rgba(0, 0, 0, 0.25);
   z-index: 2;
+}
+
+.authorization::after {
+  position: absolute;
+  content: "";
+  width: 277px;
+  height: 40px;
+  top: -35px;
+  right: 0;
 }
 
 .authorization form {
@@ -341,12 +353,10 @@ a {
   color: var(--active-link-pale);
 }
 
-.page-header__authorization-link:hover ~ .authorization,
-.page-header__authorization-link:focus ~ .authorization,
-.page-header__authorization-link:focus-within ~ .authorization,
-.authorization:hover .authorization {
-  visibility: visible;
-  opacity: 1;
+.page-header__authorization-container:hover .authorization,
+.page-header__authorization-container:focus .authorization,
+.page-header__authorization-container:focus-within .authorization {
+  display: block;
 }
 
 .page-header__cart-link {
@@ -438,9 +448,7 @@ a {
 }
 
 .catalog__dropdown-list {
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity ease-in-out 0.7s;
+  display: none;
   position: absolute;
   top: 38px;
   left: -7px;
@@ -454,10 +462,8 @@ a {
 
 .catalog:hover .catalog__dropdown-list,
 .catalog:focus .catalog__dropdown-list,
-.catalog:focus-within .catalog__dropdown-list,
-.catalog__dropdown-list:hover .catalog__dropdown-list {
-  visibility: visible;
-  opacity: 1;
+.catalog:focus-within .catalog__dropdown-list {
+  display: block;
 }
 
 .catalog__item {
@@ -468,7 +474,8 @@ a {
   padding: 0 0 0 20px;
 }
 
-.catalog__item:hover {
+.catalog__item:hover,
+.catalog__item:focus-within {
   background-color: var(--hover-menu-item-background);
 }
 
