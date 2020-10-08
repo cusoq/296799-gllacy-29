@@ -35,33 +35,36 @@
     </nav>
     <div class="page-header__interactive-container">
       <!-- ПОИСК ПО САЙТУ -->
-      <a class="page-header__search-link" href=""></a>
-      <div class="page-header__search search">
-        <!-- ФОРМА ПОИСКА -->
-        <form action="#" method="get">
-        <label class="visually-hidden" for="search-id">Поиск по сайту</label>
-        <input class="search__input text-input" type="search" id="search-id" name="search" placeholder="Крем-брюле">
-      </form>
-      </div><!-- конец модального окна поиска -->
+      <div class="page-header__search-container">
+        <a class="page-header__search-link" href=""></a>
+        <div class="page-header__search search">
+          <!-- ФОРМА ПОИСКА -->
+          <form action="#" method="get">
+            <label class="visually-hidden" for="search-id">Поиск по сайту</label>
+            <input class="search__input text-input" type="search" id="search-id" name="search" placeholder="Крем-брюле">
+          </form>
+        </div><!-- конец модального окна поиска -->
+      </div><!-- конец контейнера поиска -->
 
       <!-- АВТОРИЗАЦИЯ -->
-      <a class="page-header__authorization-link" href="">Вход</a> <!-- ссылка, т.к. в случае неработающего js будет вести на другую страницу -->
-      <div class="page-header__authorization authorization">
-        <!-- ФОРМА АВТОРИЗАЦИИ -->
-        <form action="#" method="post">
-        <label class="visually-hidden" for="email-id">Электронная почта</label>
-        <input class="authorization__input text-input" type="email" id="email-id" name="email" placeholder="email@example.com">
-        <label class="visually-hidden" for="password-id">Пароль</label>
-        <input class="authorization__input text-input" type="email" id="password-id" name="password" placeholder="******">
-        <input class="authorization__button btn" type="submit" value="Войти">
-        <p class="authorization__help"><a href="">Забыли пароль?</a><a href="">Новая регистрация</a></p>
+      <div class="page-header__authorization-container">
+        <a class="page-header__authorization-link" href="">Вход</a> <!-- ссылка, т.к. в случае неработающего js будет вести на другую страницу -->
+        <div class="page-header__authorization authorization">
+          <!-- ФОРМА АВТОРИЗАЦИИ -->
+          <form action="#" method="post">
+            <label class="visually-hidden" for="email-id">Электронная почта</label>
+            <input class="authorization__input text-input" type="email" id="email-id" name="email" placeholder="email@example.com">
+            <label class="visually-hidden" for="password-id">Пароль</label>
+            <input class="authorization__input text-input" type="email" id="password-id" name="password" placeholder="******">
+            <input class="authorization__button btn" type="submit" value="Войти">
+            <p class="authorization__help"><a class="authorization__help-link" href="">Забыли пароль?</a><a class="authorization__help-link" href="">Новая регистрация</a></p>
 
-      </form>
-      </div><!-- конец модального окна авторизации -->
-
+          </form>
+        </div><!-- конец модального окна авторизации -->
+      </div><!-- конец контейнера авторизации -->
       <!-- КНОПКА ДОБАВЛЕНИЯ ТОВАРА -->
       <a class="page-header__cart-link" href="">Пусто</a>
-      <div class="visually-hidden">
+      <div class="page-header__cart cart visually-hidden">
         <!-- МОДАЛЬНОЕ ОКНО ПРОСМОТРА КОРЗИНЫ И ЗАКАЗА -->
       </div><!-- конец модального окна корзины -->
     </div><!-- конец конейнера интерактивных элементов -->
@@ -119,7 +122,7 @@
           <img class="cards__pic" src="img/goods-11-orange.png" width="267" height="267" alt="Купить Сливочное с апельсиновым джемом и цитрусовой стружкой">
           <p class="cards__price">310&nbsp;&#x20BD;<span class="cards__measure">/кг</span></p>
           <h3 class="cards__caption"><a class="cards__description-purchase-link" href="">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
-          <a class="cards__view-link btn visually-hidden" href="">Быстрый просмотр</a>
+          <a class="cards__view-link btn" href="">Быстрый просмотр</a>
         </li> <!-- конец первой карточки списка -->
 
         <li class="cards__item cards__item--hit">
@@ -127,7 +130,7 @@
           <img class="cards__pic" src="img/goods-12-coffee.png" width="267" height="267" alt="Купить Сливочно-кофейное с кусочками шоколада">
           <p class="cards__price">380&nbsp;&#x20BD;<span class="cards__measure">/кг</span></p>
           <h3 class="cards__caption"><a class="cards__description-purchase-link" href="">Сливочно-кофейное с кусочками шоколада</a></h3>
-          <a class="cards__view-link btn visually-hidden" href="">Быстрый просмотр</a>
+          <a class="cards__view-link btn" href="">Быстрый просмотр</a>
         </li> <!-- конец второй карточки списка -->
 
         <li class="cards__item cards__item--hit">
@@ -135,7 +138,7 @@
           <img class="cards__pic" src="img/goods-13-cream-strowberry.png" width="267" height="267" alt="Купить Сливочно-клубничное с присыпкой из белого шоколада">
           <p class="cards__price">355&nbsp;&#x20BD;<span class="cards__measure">/кг</span></p>
           <h3 class="cards__caption"><a class="cards__description-purchase-link" href="">Сливочно-клубничное<br> с присыпкой из белого шоколада</a></h3>
-          <a class="cards__view-link btn visually-hidden" href="">Быстрый просмотр</a>
+          <a class="cards__view-link btn" href="">Быстрый просмотр</a>
         </li> <!-- конец третьей карточки списка -->
 
         <li class="cards__item cards__item--hit">
@@ -143,7 +146,7 @@
           <img class="cards__pic" src="img/goods-14-caramel.png" width="267" height="267" alt="Купить Сливочное крем-брюле с карамельной подливкой">
           <p class="cards__price">415&nbsp;&#x20BD;<span class="cards__measure">/кг</span></p>
           <h3 class="cards__caption"><a class="cards__description-purchase-link" href="">Сливочное крем-брюле<br> с карамельной подливкой</a></h3>
-          <a class="cards__view-link btn visually-hidden" href="">Быстрый просмотр</a>
+          <a class="cards__view-link btn" href="">Быстрый просмотр</a>
         </li> <!-- конец четвёртой карточки списка -->
       </ul>
     </section>
