@@ -15,13 +15,13 @@
 
   <header class="page-header">
     <!-- ЛОГОТИП -->
-    <a class="page-header__logo-link" href="index.html"><img src="img/page-logo.svg" width="154" height="64" alt="Переход на главную страницу, логотип"></a>
+    <a class="page-header__logo-link" href="index.html"><img class="page-header__logo-pic" src="img/page-logo.svg" width="154" height="64" alt="Переход на главную страницу, логотип"></a>
     <!-- НАВИГАЦИЯ ПО САЙТУ -->
     <nav class="page-header__navigation navigation">
       <ul class="navigation__list list">
         <li class="navigation__item navigation__item--current catalog"><a href="">Каталог</a>
           <!-- ВЫПАДАЮЩЕЕ МЕНЮ КАТАЛОГА -->
-          <ul class="catalog__dropdown-list visually-hidden list">
+          <ul class="catalog__dropdown-list list">
             <li class="catalog__item catalog__item--news"><a href="">Новинки</a></li>
             <li class="catalog__item"><a href="">Сливочное</a></li> <!-- не активна -->
             <li class="catalog__item"><a href="">Щербеты</a></li>
@@ -36,35 +36,78 @@
 
     <div class="page-header__interactive-container">
       <!-- ПОИСК ПО САЙТУ -->
-      <a class="page-header__search-link" href=""></a>
-      <div class="page-header__search search visually-hidden">
-        <!-- ФОРМА ПОИСКА -->
-        <form action="#" method="get">
-        <label class="visually-hidden" for="search-id">Поиск по сайту</label>
-        <input class="search__input text-input" type="search" id="search-id" name="search" placeholder="Крем-брюле">
-      </form>
-      </div><!-- конец модального окна поиска -->
+      <div class="page-header__search-container">
+        <a class="page-header__search-link" href=""></a>
+        <div class="page-header__search search">
+          <!-- ФОРМА ПОИСКА -->
+          <form action="#" method="get">
+            <label class="visually-hidden" for="search-id">Поиск по сайту</label>
+            <input class="search__input text-input" type="search" id="search-id" name="search" placeholder="Крем-брюле">
+          </form>
+        </div><!-- конец модального окна поиска -->
+      </div><!-- конец контейнера поиска -->
 
       <!-- АВТОРИЗАЦИЯ -->
-      <a class="page-header__authorization-link" href="">Вход</a> <!-- ссылка, т.к. в случае неработающего js будет вести на другую страницу -->
-      <div class="page-header__authorization authorization visually-hidden">
-        <!-- ФОРМА АВТОРИЗАЦИИ -->
-        <form action="#" method="post">
-        <label class="visually-hidden" for="email-id">Электронная почта</label>
-        <input class="authorization__input text-input" type="email" id="email-id" name="email" placeholder="email@example.com">
-        <label class="visually-hidden" for="password-id">Пароль</label>
-        <input class="authorization__input text-input" type="email" id="password-id" name="password" placeholder="******">
-        <input class="authorization__button btn" type="submit" value="Войти">
-        <p class="authorization__help"><a class="authorization__help-link" href="">Забыли пароль?</a><a class="authorization__help-link" href="">Новая регистрация</a></p>
+      <div class="page-header__authorization-container">
+        <a class="page-header__authorization-link" href="">Вход</a> <!-- ссылка, т.к. в случае неработающего js будет вести на другую страницу -->
+        <div class="page-header__authorization authorization">
+          <!-- ФОРМА АВТОРИЗАЦИИ -->
+          <form action="#" method="post">
+            <label class="visually-hidden" for="email-id">Электронная почта</label>
+            <input class="authorization__input text-input" type="email" id="email-id" name="email" placeholder="email@example.com">
+            <label class="visually-hidden" for="password-id">Пароль</label>
+            <input class="authorization__input text-input" type="email" id="password-id" name="password" placeholder="******">
+            <input class="authorization__button btn" type="submit" value="Войти">
+            <p class="authorization__help"><a class="authorization__help-link" href="">Забыли пароль?</a><a class="authorization__help-link" href="">Новая регистрация</a></p>
 
-      </form>
-      </div><!-- конец модального окна авторизации -->
+          </form>
+        </div><!-- конец модального окна авторизации -->
+      </div><!-- конец контейнера авторизации -->
+
 
       <!-- КНОПКА ДОБАВЛЕНИЯ ТОВАРА -->
-      <a class="page-header__cart-link page-header__cart-link--notempty" href="">2 товара</a>
-      <div class="page-header__cart cart">
-        <!-- МОДАЛЬНОЕ ОКНО ПРОСМОТРА КОРЗИНЫ И ЗАКАЗА -->
-      </div><!-- конец модального окна корзины -->
+      <div class="page-header__cart-container page-header__cart-container--notempty">
+        <a class="page-header__cart-link page-header__cart-link--notempty" href="">2 товара</a>
+        <div class="page-header__cart cart">
+          <!-- МОДАЛЬНОЕ ОКНО ПРОСМОТРА КОРЗИНЫ И ЗАКАЗА -->
+          <table class="cart__list">
+
+            <tr>
+              <td>
+                <button class="cart__remove-button"></button><img src="img/goods-11-orange.png" width="33" height="33" alt="">
+                <p class="cart__goods-name">Пломбир с апельсиновым джемом</p>
+              </td>
+              <td>
+                <p class="cart__weight">1,5 кг х <span>200 руб.</span></p>
+              </td>
+
+              <td>
+                <p class="cart__price">300 руб.</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button class="cart__remove-button"></button><img src="img/goods-13-cream-strowberry.png" width="33" height="33" alt="">
+                <p class="cart__goods-name">Клубничный пломбир с присыпкой из белого шоколада</p>
+              </td>
+              <td>
+                <p class="cart__weight">1,5 кг х <span>300 руб.</span></p>
+              </td>
+
+              <td>
+                <p class="cart__price">450 руб.</p>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="3">
+                <p class="cart__result-price">Итого: <span>750 руб.</span></p>
+              </td>
+            </tr>
+
+          </table>
+          <a class="cart__purchase-link btn">Оформить заказ</a>
+        </div><!-- конец модального окна корзины -->
+      </div><!-- конец контейнера корзины -->
     </div><!-- конец конейнера интерактивных элементов -->
     <!-- ЗВОНИТЬ СЮДА -->
     <p class="page-header__contacts">с 10 до 20, ежедневно<br><a class="page-header__contacts-tel" href="tel:88124502525">8 812 450-25-25</a></p>
@@ -74,48 +117,94 @@
   <main class="catalog-main-page">
     <h1 class="catalog-main-page__caption">Сливочное мороженое</h1>
     <!-- ХЛЕБНЫЕ КРОШКИ -->
-    <ul class="catalog-main-page__breadcrumbs list">
-      <li><a href="index.html">Главная</a></li>
-      <li><a href="">Каталог</a></li>
+    <ul class="catalog-main-page__breadcrumbs breadcrumbs list">
+      <li class="breadcrumbs__parent-nodes"><a href="index.html">Главная</a></li>
+      <li class="breadcrumbs__parent-nodes"><a href="">Каталог</a></li>
       <li><a href="">Сливочное</a></li> <!-- не активна -->
     </ul> <!-- конец хлебных крошек -->
 
     <!-- БЛОК С ФИЛЬТРАМИ -->
     <section class="catalog-main-page__filters filters">
       <h2 class="visually-hidden">Фильтры</h2>
-      <ul class="filters__list list">
-        <li class="filters__item filters__item--creteria-sort">
-          <h3 class="filters__filter-caption">Сортировка:</h3>
-          <span class="filters__creteria-default" tabindex="0">по популярности</span>
-          <ul class="filters__creteria-list visually-hidden list">
-            <li class="filters__creteria-item filters__creteria-item--current">по популярности</li>
-            <li class="filters__creteria-item">сначала недорогие</li>
-            <li class="filters__creteria-item">сначала дорогие</li>
-            <li class="filters__creteria-item">по жирности</li>
-          </ul><!-- конец сортировки по общим признакам -->
-        </li>
+      <form class="filters__form" method="get" action="?">
+        <ul class="filters__list list">
+          <li class="filters__item filters__item--creteria-sort">
+            <h3 class="filters__filter-caption">Сортировка:</h3>
+            <p class="filters__creteria-default" tabindex="0">по популярности <span>&#9660;</span></p>
+            <ul class="filters__creteria-list list">
+              <li><button type="button" class="filters__sort-button filters__sort-button--current">по популярности</button></li>
+              <li><button type="button" class="filters__sort-button">сначала недорогие</button></li>
+              <li><button type="button" class="filters__sort-button">сначала дорогие</button></li>
+              <li><button type="button" class="filters__sort-button">по жирности</button></li>
+            </ul> <!-- конец сортировки по общим признакам -->
+              </li>
 
-        <li class="filters__item filters__item--price-sort">
-          <h3 class="filters__filter-caption">Цена: 100 ₽ – 500 ₽</h3>
-          <!-- ФОРМА type="range" ФИЛЬТРА ПО ЦЕНЕ -->
-        </li>
+              <li class="filters__item filters__item--price-sort">
 
-        <li class="filters__item filters__item--fat-content-sort">
-          <h3 class="filters__filter-caption">Жирность:</h3>
-          <!-- ФОРМА type="radio" ФИЛЬТРА ПО ЖИРНОСТИ -->
-        </li>
+                <!-- ФОРМА type="range" ФИЛЬТРА ПО ЦЕНЕ -->
+                <fieldset class="filters__price-range range">
 
-        <li class="filters__item filters__item--complement-sort">
-          <h3 class="filters__filter-caption">Наполнители:</h3>
-          <!-- ФОРМА type="checkbox" ФИЛЬТРА ПО НАПОЛНИТЕЛЯМ -->
-        </li>
+                  <legend class="visually-hidden">Стоимость:</legend>
+                  <p class="filters__filter-caption">Цена:&thinsp;
+                    <label class="range__price--min">100&thinsp;&#8381;&thinsp;&ndash;&thinsp;<input class="visually-hidden" name="min-price" type="text" value="100"></label>
+                    <label class="range__price--max">500&thinsp;&#8381;<input class="visually-hidden" name="max-price" type="text" value="500"></label>
+                  </p>
+                  <input class="visually-hidden" type="range" name="price" value="1000">
+                  <div class="range__controls">
+                    <div class="range__bar-container">
+                      <div class="range__bar" style="margin-left: 11%; width: 59%">
+                        <div class="range__control range__control--min"></div>
+                        <div class="range__control range__control--max"></div>
+                      </div><!-- конец шкалы ранжирования -->
+                    </div> <!-- конец контейнера шкалы ранжирования -->
+                  </div>
 
-        <li class="filters__item filters__item--submit">
-          <h3 class="visually-hidden">Кнопка отправки формы</h3>
-          <button type="submit">Применить</button>
-        </li>
-      </ul> <!-- конец списка фильтров -->
+                </fieldset>
+              </li>
 
+              <li class="filters__item filters__item--fat-content-sort">
+                <h3 class="filters__filter-caption">Жирность:</h3>
+                <!-- ФОРМА type="radio" ФИЛЬТРА ПО ЖИРНОСТИ -->
+
+                <fieldset class="filters__fat-content-sort fat-content-sort">
+                  <legend class="visually-hidden">Жирность:</legend>
+                  <p class="filters__input-wrapper"><input class="fat-content-sort__radio visually-hidden" type="radio" name="fat-content" value="n" id="zero">
+                    <label class="fat-content-sort__label" for="zero" tabindex="0">0%</label></p>
+                  <p class="filters__input-wrapper"><input class="fat-content-sort__radio visually-hidden" type="radio" name="fat-content" value="y" id="light" checked>
+                    <label class="fat-content-sort__label" for="light" tabindex="0">до 10%</label></p>
+                  <p class="filters__input-wrapper"><input class="fat-content-sort__radio visually-hidden" type="radio" name="fat-content" value="n" id="fat">
+                    <label class="fat-content-sort__label" for="fat" tabindex="0">до 30%</label></p>
+                  <p class="filters__input-wrapper"><input class="fat-content-sort__radio visually-hidden" type="radio" name="fat-content" value="n" id="enormous">
+                    <label class="fat-content-sort__label" for="enormous" tabindex="0">выше 30%</label></p>
+                </fieldset>
+
+              </li>
+
+              <li class="filters__item filters__item--complement-sort">
+                <h3 class="filters__filter-caption">Наполнители:</h3>
+                <!-- ФОРМА type="checkbox" ФИЛЬТРА ПО НАПОЛНИТЕЛЯМ -->
+
+                <fieldset class="filters__complement-sort complement-sort">
+                  <legend class="visually-hidden">Особенности:</legend>
+                  <p class="filters__input-wrapper"><input class="complement-sort__checkbox visually-hidden" type="checkbox" name="slider" id="chocolate" checked>
+                    <label class="complement-sort__label" for="chocolate" tabindex="0">шоколадные</label></p>
+                  <p class="filters__input-wrapper"><input class="complement-sort__checkbox visually-hidden" type="checkbox" name="advantages" id="sugar" checked>
+                    <label class="complement-sort__label" for="sugar" tabindex="0">сахарные присыпки</label></p>
+                  <p class="filters__input-wrapper"><input class="complement-sort__checkbox visually-hidden" type="checkbox" name="news" id="fruit">
+                    <label class="complement-sort__label" for="fruit" tabindex="0">фрукты</label></p>
+                  <p class="filters__input-wrapper"><input class="complement-sort__checkbox visually-hidden" type="checkbox" name="gallery" id="syrup">
+                    <label class="complement-sort__label" for="syrup" tabindex="0">сиропы</label></p>
+                  <p class="filters__input-wrapper"><input class="complement-sort__checkbox visually-hidden" type="checkbox" name="cart" id="jam">
+                    <label class="complement-sort__label" for="jam" tabindex="0">джемы</label></p>
+                </fieldset>
+              </li>
+
+              <li class="filters__item filters__item--submit">
+                <h3 class="visually-hidden">Кнопка отправки формы</h3>
+                <button class="filters__submit-button" type="submit">Применить</button>
+              </li>
+            </ul> <!-- конец списка фильтров -->
+      </form>
     </section>
     <!-- БЛОК С ТОВАРАМИ -->
     <section class="catalog-main-page__cards cards">
@@ -156,7 +245,7 @@
         <li class="cards__item">
           <img class="cards__pic" src="img/goods-21-lingonberry.png" width="267" height="267" alt="Купить Сливочное с брусничным джемом">
           <p class="cards__price">325 ₽<span class="cards__measure">/кг</span></p>
-          <h3 class="cards__caption"><a class="cards__description-purchase-link" href="">Сливочное с брусничным джемом</a></h3>
+          <h3 class="cards__caption"><a class="cards__description-purchase-link" href="">Сливочное с брусничным<br> джемом</a></h3>
           <a class="cards__view-link btn" href="">Быстрый просмотр</a>
         </li>
 
@@ -188,7 +277,7 @@
         <li class="cards__item">
           <img class="cards__pic" src="img/goods-31-vanilla.png" width="267" height="267" alt="Купить Сливочно-ванильное с кусочками шоколада">
           <p class="cards__price">440 ₽<span class="cards__measure">/кг</span></p>
-          <h3 class="cards__caption"><a class="cards__description-purchase-link" href="">Сливочно-ванильное с кусочками шоколада</a></h3>
+          <h3 class="cards__caption"><a class="cards__description-purchase-link" href="">Сливочно-ванильное<br> с кусочками шоколада</a></h3>
           <a class="cards__view-link btn" href="">Быстрый просмотр</a>
         </li>
 
