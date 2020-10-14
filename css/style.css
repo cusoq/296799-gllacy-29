@@ -1432,6 +1432,12 @@ td[colspan="3"] {
 /* fat-content-sort ЖИРНОСТЬ */
 
 .fat-content-sort {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.fat-content-sort__wrapper {
   display: flex;
   justify-content: space-between;
   color: var(--primary-color);
@@ -1473,6 +1479,12 @@ td[colspan="3"] {
 /* complement-sort НАПОЛНИТЕЛИ */
 
 .complement-sort {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.complement-sort__wrapper {
   display: flex;
   justify-content: space-between;
   color: var(--primary-color);
