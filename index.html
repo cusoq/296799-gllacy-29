@@ -213,16 +213,19 @@
       </div> <!-- конец блока с адресом и телефоном -->
 
       <!-- МОДАЛЬНОЕ ОКНО С ФОРМОЙ ОБРАТНОЙ СВЯЗИ -->
-      <div>
-        <!-- <p>Мы обязательно вам ответим!</p>
-        <form class="modal-form-contact" action="#" method="post">
-          <p><input class="contact-us-input" type="text" name="name" placeholder="Имя Фамилия"></p>
-          <p><input class="contact-us-input" type="email" name="email" placeholder="email@example.com"></p>
-          <p><textarea class="contact-us-text" name="message" placeholder="В свободной форме "></textarea></p>
-          <button>Отправить</button>
-          <button type="button">Закрыть</button>
-        </form> -->
-      </div> <!-- конец блока модального окна с формой обратной связи -->
+
+      <div class="contacts__feedback-overlay feedback">
+        <div class="feedback__container">
+          <p class="feedback__slogan">Мы обязательно вам ответим!</p>
+          <form class="modal-form-contact" action="#" method="post">
+            <input class="feedback__input text-input" type="text" name="name" placeholder="Имя Фамилия">
+            <input class="feedback__input text-input" type="email" name="email" placeholder="email@example.com">
+            <textarea class="feedback__description text-input" name="message" placeholder="В свободной форме "></textarea>
+            <button class="feedback__send-button btn" type="submit">Отправить</button>
+            <button class="feedback__close-button" type="button"></button>
+          </form>
+        </div> <!-- конец блока модального окна с формой обратной связи -->
+      </div> <!-- конец блока overlay -->
 
     </section>
 
