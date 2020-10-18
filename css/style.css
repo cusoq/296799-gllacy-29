@@ -897,7 +897,8 @@ td[colspan="3"] {
   z-index: 2;
 }
 
-.cards__item:hover .cards__view-link {
+.cards__item:hover .cards__view-link,
+.cards__item:focus-within .cards__view-link {
   visibility: visible;
 }
 
@@ -1136,7 +1137,6 @@ td[colspan="3"] {
 
 .social__link {
   display: block;
-  font-size: 0;
   width: 32px;
   height: 32px;
   border-radius: 50%;
