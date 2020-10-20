@@ -1,5 +1,6 @@
 :root {
   --primary-color: #fff;
+  --primary-background-color: #e5e5e5;
   --seecondary-color: #323232;
   --page-logo-color: #fbfcfb;
   --seecondary-lighten-color: #5a5a5a;
@@ -64,13 +65,9 @@
 /* ОБЩИЕ СТИЛИ */
 
 body {
-  box-sizing: border-box;
   font-family: "Roboto", "Arial", sans-serif;
   font-weight: 700;
-  margin: 0 auto;
-  padding: 10px 27px 25px 27px;
-  width: 1200px;
-  overflow-x: auto;
+  background-color: var(--primary-background-color);
 }
 
 img {
@@ -155,6 +152,14 @@ a:focus {
 /* СТИЛИ БЛОКОВ */
 
 /* .page-container */
+
+.page-container {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 10px 27px 25px 27px;
+  width: 1200px;
+  overflow-x: auto;
+}
 
 .page-container--first-slide {
   background-color: var(--page-background-green);
@@ -1064,9 +1069,6 @@ td[colspan="3"] {
 }
 
 .contacts__map iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100vw;
   height: 100%;
 }
