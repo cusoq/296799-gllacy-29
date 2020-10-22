@@ -66,6 +66,7 @@
 body {
   font-family: "Roboto", "Arial", sans-serif;
   font-weight: 700;
+  min-width: 1200px;
 }
 
 img {
@@ -156,7 +157,6 @@ a:focus {
   margin: 0 auto;
   padding: 0 27px;
   width: 1200px;
-  overflow-x: auto;
 }
 
 .page {
@@ -529,6 +529,7 @@ td[colspan="3"] {
   width: 26px;
   height: 33px;
   border: none;
+  vertical-align: middle;
   background-image: url("../img/cross.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -543,6 +544,7 @@ td[colspan="3"] {
   line-height: 44px;
   float: right;
   padding: 0 15px;
+  vertical-align: middle;
 }
 
 /* КОНТАКТНАЯ ИНФА В ШАПКЕ */
@@ -710,6 +712,7 @@ td[colspan="3"] {
   font-size: 32px;
   line-height: 60px;
   text-align: center;
+  vertical-align: middle;
   color: var(--primary-color);
   margin: 0;
   padding: 0 40px;
@@ -798,6 +801,7 @@ td[colspan="3"] {
   height: 48px;
   padding: 0 20px;
   margin: 0;
+  vertical-align: middle;
 }
 
 /* cards */
@@ -908,6 +912,7 @@ td[colspan="3"] {
   line-height: 44px;
   color: var(--primary-color);
   padding: 0 15px;
+  vertical-align: middle;
   z-index: 2;
 }
 
@@ -1062,6 +1067,7 @@ td[colspan="3"] {
   color: var(--primary-color);
   padding: 0 18px;
   float: right;
+  vertical-align: middle;
 }
 
 /* contacts */
@@ -1072,11 +1078,14 @@ td[colspan="3"] {
 
 .contacts__map {
   position: relative;
-  width: 1200px;
   height: 430px;
   margin: 0 auto;
   background-image: url("../img/map-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--seecondary-lighten-color);
   overflow: hidden;
+  z-index: -2;
 }
 
 .contacts__map iframe {
@@ -1087,7 +1096,7 @@ td[colspan="3"] {
 .contacts__map-pin {
   position: absolute;
   top: 135px;
-  left: 265px;
+  left: calc(50% - 330px);
   width: 80px;
   height: 140px;
   background-color: transparent;
@@ -1099,7 +1108,7 @@ td[colspan="3"] {
   box-sizing: border-box;
   position: absolute;
   top: 60px;
-  right: 100px;
+  left: calc(50% + 270px);
   width: 303px;
   min-height: 310px;
   padding: 30px 26px;
@@ -1136,6 +1145,7 @@ td[colspan="3"] {
   color: var(--primary-color);
   margin: 5px 0 0 0;
   padding: 0 25px;
+  vertical-align: middle;
 }
 
 /* page-footer */
@@ -1145,6 +1155,7 @@ td[colspan="3"] {
   grid-template-columns: 166px 350px 190px;
   justify-content: space-between;
   min-height: 100px;
+  padding: 0 27px 16px 27px;
 }
 
 /* social */
@@ -1723,6 +1734,7 @@ td[colspan="3"] {
   line-height: 44px;
   color: var(--primary-color);
   padding: 0 24px;
+  vertical-align: middle;
 }
 
 .feedback__close-button {
