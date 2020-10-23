@@ -223,12 +223,12 @@
 
         <!-- МОДАЛЬНОЕ ОКНО С ФОРМОЙ ОБРАТНОЙ СВЯЗИ -->
 
-        <div class="contacts__feedback-overlay feedback">
+        <div class="contacts__feedback-overlay feedback popup popup--closed">
           <div class="feedback__container">
             <p class="feedback__slogan">Мы обязательно вам ответим!</p>
-            <form class="modal-form-contact" action="#" method="post">
-              <input class="feedback__input text-input" type="text" name="name" placeholder="Имя Фамилия">
-              <input class="feedback__input text-input" type="email" name="email" placeholder="email@example.com">
+            <form class="feedback__form" action="#" method="post">
+              <input class="feedback__input feedback__input--name text-input" type="text" name="name" placeholder="Имя Фамилия">
+              <input class="feedback__input feedback__input--email text-input" type="email" name="email" placeholder="email@example.com">
               <textarea class="feedback__description text-input" name="message" placeholder="В свободной форме "></textarea>
               <button class="feedback__send-button btn" type="submit">Отправить</button>
               <button class="feedback__close-button" type="button" aria-label="Закрыть"></button>
@@ -286,6 +286,7 @@
       </div>
     </footer>
   </div> <!-- конец контейнера страницы -->
+  <script src="js/feedback-script.js"></script>
 </body>
 
 </html>

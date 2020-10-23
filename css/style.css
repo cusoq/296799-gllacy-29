@@ -1656,14 +1656,12 @@ td[colspan="3"] {
   left: 0;
   width: 100%;
   height: 100%;
-  display: none;
-
-  /* display: flex; */
   align-items: center;
   align-content: center;
   justify-content: center;
   background-color: var(--popup-shade);
 }
+
 
 .feedback__container {
   box-sizing: border-box;
@@ -1673,6 +1671,11 @@ td[colspan="3"] {
   padding: 0 24px;
   border-radius: 6px;
   background-color: var(--input-container-background);
+  animation: bounce 0.6s;
+}
+
+.feedback__container--error {
+  animation: shake 0.6s;
 }
 
 .feedback__slogan {
@@ -1725,4 +1728,52 @@ td[colspan="3"] {
   background-size: cover;
   background-color: transparent;
   border: none;
+}
+
+.popup--closed {
+  display: none;
+}
+
+.popup--showed {
+  display: flex;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
