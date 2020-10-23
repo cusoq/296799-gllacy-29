@@ -11,10 +11,11 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
-  <div class="page-container page-container--third-slide">
-    <!-- контейнер страницы-->
-    <header class="page-header">
+<body class="page page--third-slide">
+  <header class="page-header">
+    <div class="page-container page-header--container">
+      <!-- контейнер header-а-->
+
       <!-- ЛОГОТИП -->
       <a class="page-header__logo-link" href="" aria-label="Логотип Академии"><svg width="154" height="64">
           <path d="M59.341 43.15a3.806 3.806 0 00-2.152.38s-3.002 2.58-17.856-.39c-10.92-2.188-16.595-1.962-16.595-1.962s1.832-12.84 1.332-16.436a1.036 1.036 0 00-.342-.686.985.985 0 00-.71-.25c-1.09 0-1.751.432-1.751 1.028.094 2.427.01 4.859-.25 7.273a6.136 6.136 0 01-2.421 3.09 5.884 5.884 0 01-3.755.937c-4.754-.339-5.755-3.852-6.175-6.246-.42-2.393-.66-9.081.59-11.814 0 0 7.167.257 11.67-3.688 4.505-3.944 4.225-7.355 2.093-8.814-2.132-1.459-7.127-1.202-10.96 2.394a19.896 19.896 0 00-5.085 7.19S1.34 13.925 2.63 7.885c1.372-6.308 9.77-5.568 9.77-5.568 1.75.349 1.83.513 2.411-.083.58-.595 1.001-2.136-1.751-2.229C10.307-.088 2.05 1.31.468 6.938-1.223 12.928 1.9 17.211 6.093 17.88c0 0-2.292 10.376.541 15.512a9.05 9.05 0 003.555 3.87 8.723 8.723 0 005.053 1.185c1.651 0 4.574-.945 5.404-2.312 0 0-.39 3.678-.72 5.014 0 0-6.946-.093-9.118 1.027-3.694 2.003-2.923 6.698-1.502 8.362 1.201 1.418 4.815 2.188 7.427.925a10.017 10.017 0 003.757-3.231 10.368 10.368 0 001.798-4.68c4.226-.223 8.46.249 12.541 1.398 6.176 1.89 14.773 3.657 17.356 3.657 2.582 0 8.007-.76 8.337-2.97.18-1.458-.35-2.218-1.18-2.485zM15.872 8.819s3.283-2.568 4.855-.965c.352.39.556.899.572 1.431a2.245 2.245 0 01-.482 1.466c-.661.883-2.402 3.678-10.67 5.064 0 0 2.602-4.684 5.725-6.996zm.27 39.973s-4.534 2.537-5.004-.904a3.314 3.314 0 01.18-2.153 3.2 3.2 0 011.462-1.556c.79-.4 1.871-.904 6.585-.73a6.614 6.614 0 01-.94 3.098 6.402 6.402 0 01-2.283 2.245z"
@@ -81,15 +82,17 @@
       </div><!-- конец конейнера интерактивных элементов -->
       <!-- ЗВОНИТЬ СЮДА -->
       <p class="page-header__contacts">с 10 до 20, ежедневно<br><a class="page-header__contacts-tel" href="tel:88124502525">8 812 450-25-25</a></p>
+    </div><!-- конец конейнера header-а -->
+  </header>
+  <!-- ///////////////////// -->
+  <main class="main-page">
+    <h1 class="visually-hidden">Магазин Глэйси, главная страница</h1>
 
-    </header>
-    <!-- ///////////////////// -->
-    <main class="main-page">
-      <h1 class="visually-hidden">Магазин Глэйси, главная страница</h1>
-
-      <!-- КАРУСЕЛЬ названия классов временные для наглядности -->
-      <!-- оживлять предполагается при помощи JS -->
-      <div class="main-page__carousel carousel">
+    <!-- КАРУСЕЛЬ названия классов временные для наглядности -->
+    <!-- оживлять предполагается при помощи JS -->
+    <div class="main-page__carousel carousel">
+      <div class="page-container carousel--container">
+        <!-- контейнер слайдера-->
         <div class="carousel__strawberry">
           <h2 class="carousel__caption">Пломбир с помадкой<br> и клубничный щербет</h2>
           <a class="carousel__purchase-link btn" href="">Давайте оба!</a>
@@ -108,11 +111,14 @@
           <button class="carousel__control" type="button" aria-label="Второй слайд"></button>
           <button class="carousel__control carousel__control--selected" type="button" aria-label="Третий слайд"></button>
         </div>
-      </div> <!-- Конец дива карусели -->
+      </div> <!-- Конец контейнера слайдера-->
+    </div> <!-- Конец дива карусели -->
 
-      <!-- БАННЕРЫ -->
-      <aside class="main-page__benefits benefits">
-        <h2 class="visually-hidden">Баннеры</h2>
+    <!-- БАННЕРЫ -->
+    <aside class="main-page__benefits benefits">
+      <h2 class="visually-hidden">Баннеры</h2>
+      <div class="page-container benefits--container">
+        <!-- контейнер  баннеров-->
         <div class="benefits__offer benefits__offer--raspberry">
           <p class="benefits__slogan">Малинка даром!</p>
           <p class="benefits__description">При покупке 2 кг любого фруктового мороженого, добавим<br> в ваш заказ банку малинового варенья бесплатно.</p>
@@ -123,47 +129,52 @@
           <p class="benefits__description">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
           <a class="benefits__purchase-link btn" href="">Хочу шоколадки!</a>
         </div>
-      </aside>
-      <!-- БЛОК С ПРИМЕРАМИ ХИТОВ ПРОДАЖ -->
-      <section class="main-page__cards cards">
-        <h2 class="visually-hidden">Хиты продаж</h2>
-        <ul class="cards__list cards__list--hits list">
-          <li class="cards__item cards__item--hit" tabindex="0">
-            <mark class="visually-hidden">Хит</mark>
-            <img class="cards__pic" src="img/goods-11-orange.png" width="267" height="267" alt="Купить Сливочное с апельсиновым джемом и цитрусовой стружкой">
-            <p class="cards__price">310&nbsp;&#x20BD;<span class="cards__measure">/кг</span></p>
-            <h3 class="cards__caption"><a class="cards__description-purchase-link" href="">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
-            <a class="cards__view-link btn" href="">Быстрый просмотр</a>
-          </li> <!-- конец первой карточки списка -->
+      </div> <!-- Конец контейнера баннеров-->
+    </aside>
+    <!-- БЛОК С ПРИМЕРАМИ ХИТОВ ПРОДАЖ -->
+    <section class="main-page__cards cards">
+      <h2 class="visually-hidden">Хиты продаж</h2>
 
-          <li class="cards__item cards__item--hit" tabindex="0">
-            <mark class="visually-hidden">Хит</mark>
-            <img class="cards__pic" src="img/goods-12-coffee.png" width="267" height="267" alt="Купить Сливочно-кофейное с кусочками шоколада">
-            <p class="cards__price">380&nbsp;&#x20BD;<span class="cards__measure">/кг</span></p>
-            <h3 class="cards__caption"><a class="cards__description-purchase-link" href="">Сливочно-кофейное с кусочками шоколада</a></h3>
-            <a class="cards__view-link btn" href="">Быстрый просмотр</a>
-          </li> <!-- конец второй карточки списка -->
+      <ul class="cards__list cards__list--hits list">
+        <li class="cards__item cards__item--hit" tabindex="0">
+          <mark class="visually-hidden">Хит</mark>
+          <img class="cards__pic" src="img/goods-11-orange.png" width="267" height="267" alt="Купить Сливочное с апельсиновым джемом и цитрусовой стружкой">
+          <p class="cards__price">310&nbsp;&#x20BD;<span class="cards__measure">/кг</span></p>
+          <h3 class="cards__caption"><a class="cards__description-purchase-link" href="">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
+          <a class="cards__view-link btn" href="">Быстрый просмотр</a>
+        </li> <!-- конец первой карточки списка -->
 
-          <li class="cards__item cards__item--hit" tabindex="0">
-            <mark class="visually-hidden">Хит</mark>
-            <img class="cards__pic" src="img/goods-13-cream-strowberry.png" width="267" height="267" alt="Купить Сливочно-клубничное с присыпкой из белого шоколада">
-            <p class="cards__price">355&nbsp;&#x20BD;<span class="cards__measure">/кг</span></p>
-            <h3 class="cards__caption"><a class="cards__description-purchase-link" href="">Сливочно-клубничное<br> с присыпкой из белого шоколада</a></h3>
-            <a class="cards__view-link btn" href="">Быстрый просмотр</a>
-          </li> <!-- конец третьей карточки списка -->
+        <li class="cards__item cards__item--hit" tabindex="0">
+          <mark class="visually-hidden">Хит</mark>
+          <img class="cards__pic" src="img/goods-12-coffee.png" width="267" height="267" alt="Купить Сливочно-кофейное с кусочками шоколада">
+          <p class="cards__price">380&nbsp;&#x20BD;<span class="cards__measure">/кг</span></p>
+          <h3 class="cards__caption"><a class="cards__description-purchase-link" href="">Сливочно-кофейное с кусочками шоколада</a></h3>
+          <a class="cards__view-link btn" href="">Быстрый просмотр</a>
+        </li> <!-- конец второй карточки списка -->
 
-          <li class="cards__item cards__item--hit" tabindex="0">
-            <mark class="visually-hidden">Хит</mark>
-            <img class="cards__pic" src="img/goods-14-caramel.png" width="267" height="267" alt="Купить Сливочное крем-брюле с карамельной подливкой">
-            <p class="cards__price">415&nbsp;&#x20BD;<span class="cards__measure">/кг</span></p>
-            <h3 class="cards__caption"><a class="cards__description-purchase-link" href="">Сливочное крем-брюле<br> с карамельной подливкой</a></h3>
-            <a class="cards__view-link btn" href="">Быстрый просмотр</a>
-          </li> <!-- конец четвёртой карточки списка -->
-        </ul>
-      </section>
-      <!-- ОСНОВНАЯ ИНФА ПРО МАГАЗ -->
-      <section class="main-page__features features">
-        <h2 class="visually-hidden">О магазине Глэйси</h2>
+        <li class="cards__item cards__item--hit" tabindex="0">
+          <mark class="visually-hidden">Хит</mark>
+          <img class="cards__pic" src="img/goods-13-cream-strowberry.png" width="267" height="267" alt="Купить Сливочно-клубничное с присыпкой из белого шоколада">
+          <p class="cards__price">355&nbsp;&#x20BD;<span class="cards__measure">/кг</span></p>
+          <h3 class="cards__caption"><a class="cards__description-purchase-link" href="">Сливочно-клубничное<br> с присыпкой из белого шоколада</a></h3>
+          <a class="cards__view-link btn" href="">Быстрый просмотр</a>
+        </li> <!-- конец третьей карточки списка -->
+
+        <li class="cards__item cards__item--hit" tabindex="0">
+          <mark class="visually-hidden">Хит</mark>
+          <img class="cards__pic" src="img/goods-14-caramel.png" width="267" height="267" alt="Купить Сливочное крем-брюле с карамельной подливкой">
+          <p class="cards__price">415&nbsp;&#x20BD;<span class="cards__measure">/кг</span></p>
+          <h3 class="cards__caption"><a class="cards__description-purchase-link" href="">Сливочное крем-брюле<br> с карамельной подливкой</a></h3>
+          <a class="cards__view-link btn" href="">Быстрый просмотр</a>
+        </li> <!-- конец четвёртой карточки списка -->
+      </ul>
+
+    </section>
+    <!-- ОСНОВНАЯ ИНФА ПРО МАГАЗ -->
+    <section class="main-page__features features">
+      <h2 class="visually-hidden">О магазине Глэйси</h2>
+      <div class="page-container features--container">
+        <!-- контейнер  преимуществ-->
         <p class="features__intro">Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</p>
         <ul class="features__list list">
           <li class="features__item features__item--ice-cream">
@@ -179,9 +190,12 @@
             <p class="features__feature">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
           </li>
         </ul>
-      </section>
+      </div> <!-- Конец контейнера преимуществ-->
+    </section>
 
-      <!-- БЛОК СО СТАТЬЯМИ ИЛИ ССЫЛКОЙ НА БЛОГ -->
+    <!-- БЛОК СО СТАТЬЯМИ ИЛИ ССЫЛКОЙ НА БЛОГ -->
+    <div class="page-container page-container--articles">
+      <!-- контейнер статей-->
       <article class="main-page__articles articles">
         <h2 class="articles__content-caption">Новое в нашем блоге</h2>
         <a class="articles__content-link" href="">10 способов сервировки фруктовых щербетов&emsp;<br>&nbsp;к столу</a>
@@ -198,30 +212,29 @@
           <button class="mailing__submit-button btn">Отправить</button>
         </form>
       </section>
+    </div> <!-- Конец контейнера статей-->
 
-      <!-- БЛОК С КОНТАКТАМИ -->
-      <section class="main-page__contacts contacts">
-        <h2 class="visually-hidden">Контакты</h2>
-        <div class="contacts__map">
-          <div class="contacts__map-pin">
-          </div>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1600943056077!5m2!1sru!2sru"
-            width="1200" height="430" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
-          </iframe>
+    <!-- БЛОК С КОНТАКТАМИ -->
+    <section class="main-page__contacts contacts">
+      <h2 class="visually-hidden">Контакты</h2>
+      <div class="contacts__map">
+        <div class="contacts__map-pin">
         </div>
-        <!-- СОБСТВЕННО АДРЕС И ТЕЛЕФОН -->
-        <div class="contacts__all-contacts">
-          <p class="contacts__paragraph">Адрес главного офиса<br> и офлайн-магазина:<br>
-            <b class="contacts__contact-info">ул. Большая Конюшенная, 19/8, Санкт-Петербург</b>
-          </p>
-          <p class="contacts__paragraph">Для заказов по телефону:<br>
-            <b class="contacts__contact-info"><a href="tel:88124502525">8 812 450-25-25</a></b><br>
-            (с 10 до 20 ежедневно)
-          </p>
-          <button class="contacts__submit-button btn">Форма обратной связи</button>
-        </div> <!-- конец блока с адресом и телефоном -->
-
-        <!-- МОДАЛЬНОЕ ОКНО С ФОРМОЙ ОБРАТНОЙ СВЯЗИ -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1600943056077!5m2!1sru!2sru"
+          width="1200" height="430" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+        </iframe>
+      </div>
+      <!-- СОБСТВЕННО АДРЕС И ТЕЛЕФОН -->
+      <div class="contacts__all-contacts">
+        <p class="contacts__paragraph">Адрес главного офиса<br> и офлайн-магазина:<br>
+          <b class="contacts__contact-info">ул. Большая Конюшенная, 19/8, Санкт-Петербург</b>
+        </p>
+        <p class="contacts__paragraph">Для заказов по телефону:<br>
+          <b class="contacts__contact-info"><a href="tel:88124502525">8 812 450-25-25</a></b><br>
+          (с 10 до 20 ежедневно)
+        </p>
+        <button class="contacts__submit-button btn">Форма обратной связи</button>
+      </div> <!-- конец блока с адресом и телефоном -->
 
         <div class="contacts__feedback-overlay feedback popup popup--closed">
           <div class="feedback__container">
@@ -236,10 +249,13 @@
           </div> <!-- конец блока модального окна с формой обратной связи -->
         </div> <!-- конец блока overlay -->
 
-      </section>
+      </div> <!-- конец блока overlay --> -->
+    </section>
 
-    </main>
-    <footer class="page-footer">
+  </main>
+  <footer class="page-footer">
+    <div class="page-container page-container--footer">
+      <!-- контейнер футера-->
       <section class="page-footer__social social">
         <h2 class="visually-hidden">Ссылки на соцсети</h2>
         <ul class="social__list list">
