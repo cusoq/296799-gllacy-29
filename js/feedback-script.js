@@ -9,7 +9,6 @@ var cross = popup.querySelector(".feedback__close-button");
 var feedbackForm = popup.querySelector(".feedback__form");
 var nameInput = popup.querySelector(".feedback__input--name");
 var emailInput = popup.querySelector(".feedback__input--email");
-var allInputs = popup.querySelectorAll(".feedback__input");
 var storage = "";
 var isStorageSupport = true;
 
@@ -50,21 +49,20 @@ var shakeTheElement = function() {
 
 // валидация заполнения полей и запись в localStorage
 var checkValues = function() {
-  allInputs.forEach(function(eachInput) {
-    if (!eachInput.value) {
-      shakeTheElement();
-      console.log("Заполните поле");
-      feedbackForm.removeEventListener("submit", onSubmit);
-      return;
+  if (!nameInput.value || !emailInput.value) {
+    event.preventDefault();
+    shakeTheElement();
+    feedbackForm.removeEventListener("submit", onSubmit);
+    console.log("Заполните поле");
+  } else {
+    if (isStorageSupport) {
+      localStorage.setItem("name", nameInput.value);
     }
-    else {
-      if (isStorageSupport) {
-        localStorage.setItem("name", nameInput.value);
-      }
-      !feedbackForm.submit();
-    }
-  });
-}
+    feedbackForm.submit();
+    closePopup();
+    console.log("Сообщение отправлено");
+  };
+};
 
 // Хендлеры
 var onClickOpener = function(evt) {
@@ -85,11 +83,8 @@ var onEscCloser = function(evt) {
   }
 }
 
-var onSubmit = function(evt) {
-  evt.preventDefault();
+var onSubmit = function() {
   checkValues();
-  // closePopup();
-  console.log("Сообщение отправлено");
 }
 
 // Обработчики событий
