@@ -50,7 +50,6 @@ var shakeTheElement = function() {
 // валидация заполнения полей и запись в localStorage
 var checkValues = function() {
   if (!nameInput.value || !emailInput.value) {
-    event.preventDefault();
     shakeTheElement();
     feedbackForm.removeEventListener("submit", onSubmit);
     console.log("Заполните поле");
@@ -83,7 +82,8 @@ var onEscCloser = function(evt) {
   }
 }
 
-var onSubmit = function() {
+var onSubmit = function(evt) {
+  evt.preventDefault();
   checkValues();
 }
 
