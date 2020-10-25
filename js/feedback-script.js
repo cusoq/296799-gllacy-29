@@ -51,7 +51,6 @@ var shakeTheElement = function() {
 var checkValues = function() {
   if (!nameInput.value || !emailInput.value) {
     shakeTheElement();
-    feedbackForm.removeEventListener("submit", onSubmit);
     console.log("Заполните поле");
   } else {
     if (isStorageSupport) {
