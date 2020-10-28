@@ -229,7 +229,8 @@
 
         <!-- ПОЛЕ ВВОДА ПОЧТОВОГО АДРЕСА -->
         <form action="#" method="post">
-          <input class="mailing__input text-input" type="email" name="email" placeholder="email@example.com">
+          <input class="mailing__input text-input" type="email" name="email" placeholder="email@example.com" id="mailing">
+          <label class="visually-hidden" for="mailing">mailing-input</label>
           <!-- КНОПКА ОТПРАВКИ -->
           <button class="mailing__submit-button btn">Отправить</button>
         </form>
@@ -263,9 +264,12 @@
         <div class="feedback__container">
           <p class="feedback__slogan">Мы обязательно вам ответим!</p>
           <form class="feedback__form" action="#" method="post">
-            <input class="feedback__input feedback__input--name text-input" type="text" name="name" placeholder="Имя Фамилия">
-            <input class="feedback__input feedback__input--email text-input" type="email" name="email" placeholder="email@example.com">
-            <textarea class="feedback__description text-input" name="message" placeholder="В свободной форме "></textarea>
+            <input class="feedback__input feedback__input--name text-input" type="text" name="name" placeholder="Имя Фамилия" id="feedback-name-input">
+            <label class="visually-hidden" for="feedback-name-input">feedback-name-input</label>
+            <input class="feedback__input feedback__input--email text-input" type="email" name="email" placeholder="email@example.com" id="feedback-email-input">
+            <label class="visually-hidden" for="feedback-email-input">feedback-email-input</label>
+            <textarea class="feedback__description text-input" name="message" placeholder="В свободной форме" id="feedback-textaria"></textarea>
+            <label class="visually-hidden" for="feedback-textaria">feedback-textaria</label>
             <button class="feedback__send-button btn" type="submit">Отправить</button>
             <button class="feedback__close-button" type="button" aria-label="Закрыть"></button>
           </form>
